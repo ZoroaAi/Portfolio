@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@mixin fontStyles{
+    color: #ffffff;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body{
+    @include fontStyles;
+    background-color: #242424;
+}

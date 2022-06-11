@@ -1,1 +1,9 @@
-506072
+Main:              #121212   Dark Grey
+Accented Neutral:  #857F72   Warm Grey
+Secondary: (Action Items, Messages, Priorities, and Statuses)       
+    #303F9F   Primary
+    #BDBDBD   Secondary
+    #00897B   Confirm
+    #         Warning      
+    #C6282C   Remove
+    #673AB7   Deep Purple

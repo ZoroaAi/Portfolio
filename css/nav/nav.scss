@@ -1,5 +1,5 @@
 
-navBar{
+.navBar{
     position: fixed;
     top: 0;
     left: 0;
@@ -60,7 +60,7 @@ nav {
 
     a {
       color: #ada594;
-      margin: 1em 1em;
+      margin: 0 1em;
       padding: 10px;
       white-space: nowrap;
       font-size: 13px;

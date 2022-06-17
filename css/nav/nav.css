@@ -1,4 +1,4 @@
-navBar {
+.navBar {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@ navBar {
   transition: all 0.3s ease;
 }
 
-navBar:before {
+.navBar:before {
   content: ' ';
   display: block;
   position: fixed;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 
 nav a {
   color: #ada594;
-  margin: 1em 1em;
+  margin: 0 1em;
   padding: 10px;
   white-space: nowrap;
   font-size: 13px;

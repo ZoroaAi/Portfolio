@@ -1,9 +1,26 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+// Colours:
+$backgroundColour: #242424;
+$textColour: #BDBDBD;
+
+@mixin colours{
+    color: #857F72;
+    color: #8992cc;
+    color: #BDBDBD;
+    color: #00897B;
+    color: #00897B;
+    color: #C6282C;
+    color: #673AB7;
+
+}
+
 @mixin fontStyles{
-    color: #ffffff;
+    color: #BDBDBD;
     font-size: 1em;
     font-family: 'Inter', sans-serif;
 
@@ -11,5 +28,29 @@
 
 body{
     @include fontStyles;
-    background-color: #242424;
+    background-color: $backgroundColour;
 }
+
+.intro{
+    width: 35vw;
+    margin-left: 10em;
+    .hello{
+        margin-bottom: 5px;
+        font-size: 1em;
+        color: #0DC7E6;
+    }
+    .name{
+        margin: 8px 0;
+        font-size: 72px;
+        color: lighten($color: $textColour, $amount: 25);
+    }
+    .myPortfolio{
+        margin-bottom: 8px;
+        font-size: 40px;
+        color: lighten($color: $textColour, $amount: 15);
+    }
+    margin-top: 25vh;
+}
+
+
+  

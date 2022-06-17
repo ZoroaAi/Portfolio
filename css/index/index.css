@@ -1,11 +1,48 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
+  color: #BDBDBD;
+  font-size: 1em;
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
   background-color: #242424;
+}
+
+.intro {
+  width: 35vw;
+  margin-left: 10em;
+  margin-top: 25vh;
+}
+
+.intro .hello {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #0DC7E6;
+}
+
+.intro .name {
+  margin: 8px 0;
+  font-size: 72px;
+  color: #fdfdfd;
+}
+
+.intro .myPortfolio {
+  margin-bottom: 8px;
+  font-size: 40px;
+  color: #e3e3e3;
+}
+
+.imgWrapper {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.imgWrapper .introImg {
+  position: absolute;
 }
 /*# sourceMappingURL=index.css.map */

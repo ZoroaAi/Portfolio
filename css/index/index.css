@@ -11,30 +11,78 @@ body {
   background-color: #17181F;
 }
 
-.intro {
+.introContainer {
   width: 35vw;
   margin-left: 10em;
   margin-top: 30vh;
 }
 
-.intro .hello {
+.introContainer .hello {
   font-size: 1em;
   color: #CB69C1;
 }
 
-.intro .name {
+.introContainer .name {
   margin-bottom: 8px;
   font-size: 72px;
   color: white;
 }
 
-.intro .myPortfolio {
+.introContainer .myPortfolio {
   margin-bottom: 8px;
   font-size: 40px;
   color: #e1dfe4;
 }
 
-.intro .generalTxt {
+.introContainer .generalTxt {
   color: #dcdae0;
+}
+
+.aboutMeContainer {
+  margin-left: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.aboutMeContainer .about-label {
+  font-size: 40px;
+}
+
+.aboutMeContainer .aboutMe-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 35vh;
+  width: 400px;
+}
+
+.aboutMeContainer .aboutMe-image {
+  width: 360px;
+  height: 360px;
+  z-index: -1;
+  background-size: cover;
+}
+
+.content-container {
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  max-height: 100vh;
+}
+
+.content-container .scroll-area {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  scroll-snap-align: start;
 }
 /*# sourceMappingURL=index.css.map */

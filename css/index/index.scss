@@ -21,7 +21,7 @@ body{
 }
 
 // Introduction to Page
-.intro{
+.introContainer{
     width: 35vw;
     margin-left: 10em;
     .hello{
@@ -45,5 +45,41 @@ body{
     margin-top: 30vh;
 }
 
+// About Me Section:
+.aboutMeContainer{
+    // width: 35vw;
+    margin-left: 10em;
+    display: flex;
+    flex-direction: row;
+    .about-label{
+        font-size: 40px;
+    }
+    .aboutMe-details{
+        display: flex;
+        flex-direction: column;
+        margin-top: 35vh;
+        width: 400px;
+        
+    }
+    .aboutMe-image{
+        width: 360px;
+        height: 360px;
+        z-index: -1;
+        background-size: cover;
+    }
+}
 
-  
+
+// For Scroll Snap
+.content-container{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    max-height: 100vh;
+    .scroll-area{
+        height: 100vh;
+        width: 100%;
+        // position: sticky;
+        top: 0;
+        scroll-snap-align: start;
+    }
+}

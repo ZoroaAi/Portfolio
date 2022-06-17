@@ -1,3 +1,4 @@
+$textColour: #EEEDF0;
 
 .navBar{
     position: fixed;
@@ -14,7 +15,7 @@
         top: 0;
         left: 0;
         width: 0;
-        background-color: #fff;
+        background-color: #6C72CB;
         height: 120px;
         transition: all 0.3s ease;
     }
@@ -52,14 +53,14 @@ nav {
         a {
           border-bottom: 2px solid transparent;
           &:hover {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid #6C72CB;
           }
         }
       } 
     }
 
     a {
-      color: #ada594;
+      color: $textColour;
       margin: 0 1em;
       padding: 10px;
       white-space: nowrap;

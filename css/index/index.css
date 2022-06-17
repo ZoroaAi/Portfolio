@@ -5,44 +5,36 @@
 }
 
 body {
-  color: #BDBDBD;
+  color: #EEEDF0;
   font-size: 1em;
   font-family: 'Inter', sans-serif;
-  background-color: #242424;
+  background-color: #17181F;
 }
 
 .intro {
   width: 35vw;
   margin-left: 10em;
-  margin-top: 25vh;
+  margin-top: 30vh;
 }
 
 .intro .hello {
-  margin-bottom: 5px;
   font-size: 1em;
-  color: #0DC7E6;
+  color: #CB69C1;
 }
 
 .intro .name {
-  margin: 8px 0;
+  margin-bottom: 8px;
   font-size: 72px;
-  color: #fdfdfd;
+  color: white;
 }
 
 .intro .myPortfolio {
   margin-bottom: 8px;
   font-size: 40px;
-  color: #e3e3e3;
+  color: #e1dfe4;
 }
 
-.imgWrapper {
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.imgWrapper .introImg {
-  position: absolute;
+.intro .generalTxt {
+  color: #dcdae0;
 }
 /*# sourceMappingURL=index.css.map */

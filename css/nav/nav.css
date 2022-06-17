@@ -15,7 +15,7 @@
   top: 0;
   left: 0;
   width: 0;
-  background-color: #fff;
+  background-color: #6C72CB;
   height: 120px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -78,11 +78,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #6C72CB;
 }
 
 nav a {
-  color: #ada594;
+  color: #EEEDF0;
   margin: 0 1em;
   padding: 10px;
   white-space: nowrap;

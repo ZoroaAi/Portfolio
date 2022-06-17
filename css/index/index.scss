@@ -5,22 +5,11 @@
 }
 
 // Colours:
-$backgroundColour: #242424;
-$textColour: #BDBDBD;
-
-@mixin colours{
-    color: #857F72;
-    color: #8992cc;
-    color: #BDBDBD;
-    color: #00897B;
-    color: #00897B;
-    color: #C6282C;
-    color: #673AB7;
-
-}
+$backgroundColour: #17181F;
+$textColour: #EEEDF0;
 
 @mixin fontStyles{
-    color: #BDBDBD;
+    color: $textColour;
     font-size: 1em;
     font-family: 'Inter', sans-serif;
 
@@ -31,25 +20,29 @@ body{
     background-color: $backgroundColour;
 }
 
+// Introduction to Page
 .intro{
     width: 35vw;
     margin-left: 10em;
     .hello{
-        margin-bottom: 5px;
+        // margin-bottom: 2px;
         font-size: 1em;
-        color: #0DC7E6;
+        color: #CB69C1;
     }
     .name{
-        margin: 8px 0;
+        margin-bottom: 8px;
         font-size: 72px;
         color: lighten($color: $textColour, $amount: 25);
     }
     .myPortfolio{
         margin-bottom: 8px;
         font-size: 40px;
-        color: lighten($color: $textColour, $amount: 15);
+        color: darken($color: $textColour, $amount: 5);
     }
-    margin-top: 25vh;
+    .generalTxt{
+        color: darken($color: $textColour, $amount: 7)
+    }
+    margin-top: 30vh;
 }
 
 

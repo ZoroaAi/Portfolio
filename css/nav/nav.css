@@ -73,12 +73,8 @@ nav ul li {
   margin: 0 10px;
 }
 
-nav ul li a {
-  border-bottom: 2px solid transparent;
-}
-
 nav ul li a:hover {
-  border-bottom: 2px solid #6C72CB;
+  color: #CB69C1;
 }
 
 nav a {

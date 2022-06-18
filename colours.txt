@@ -7,3 +7,10 @@ Secondary: (Action Items, Messages, Priorities, and Statuses)
     #         Warning      
     #C6282C   Remove
     #673AB7   Deep Purple
+
+
+Dark Neon Palette: 
+#17181F
+#6C72CB
+#CB69C1
+#EEEDF0

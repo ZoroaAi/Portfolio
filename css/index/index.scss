@@ -7,7 +7,9 @@
 // Colours:
 $backgroundColour: #17181F;
 $textColour: #EEEDF0;
+$accent: #6C72CB;
 
+// Mixins:
 @mixin fontStyles{
     color: $textColour;
     font-size: 1em;
@@ -20,14 +22,13 @@ body{
     background-color: $backgroundColour;
 }
 
-// Introduction to Page
+// Introduction to Page:
 .introContainer{
     width: 35vw;
     margin-left: 10em;
     .hello{
-        // margin-bottom: 2px;
         font-size: 1em;
-        color: #CB69C1;
+        color: $accent;
     }
     .name{
         margin-bottom: 8px;
@@ -42,30 +43,24 @@ body{
     .generalTxt{
         color: darken($color: $textColour, $amount: 7)
     }
-    margin-top: 30vh;
+    transform: translateY(35vh);
 }
 
 // About Me Section:
 .aboutMeContainer{
-    // width: 35vw;
     margin-left: 10em;
     display: flex;
     flex-direction: row;
     .about-label{
-        font-size: 40px;
+        color: $accent;
+        font-size: 32px;
+        margin-bottom: 10px;
     }
     .aboutMe-details{
         display: flex;
         flex-direction: column;
         margin-top: 35vh;
         width: 400px;
-        
-    }
-    .aboutMe-image{
-        width: 360px;
-        height: 360px;
-        z-index: -1;
-        background-size: cover;
     }
 }
 
@@ -76,10 +71,9 @@ body{
     scroll-snap-type: y mandatory;
     max-height: 100vh;
     .scroll-area{
+        top: 0;
         height: 100vh;
         width: 100%;
-        // position: sticky;
-        top: 0;
         scroll-snap-align: start;
     }
 }

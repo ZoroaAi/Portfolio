@@ -8,6 +8,7 @@
 $backgroundColour: #17181F;
 $textColour: #EEEDF0;
 $accent: #6C72CB;
+$contrast: #CB69C1;
 
 // Mixins:
 @mixin fontStyles{
@@ -51,18 +52,28 @@ body{
     margin-left: 10em;
     display: flex;
     flex-direction: row;
+    transform: translateY(30vh);
     .about-label{
         color: $accent;
         font-size: 32px;
         margin-bottom: 10px;
     }
     .aboutMe-details{
-        display: flex;
-        flex-direction: column;
-        margin-top: 35vh;
-        width: 400px;
+        width: 600px;
+    }
+    .aboutMe-text{
+        p{
+            margin: 1em 0;
+            font-size: 14px;
+            span{
+                color: $contrast;
+            }
+        }
     }
 }
+
+// Project Cards
+
 
 
 // For Scroll Snap

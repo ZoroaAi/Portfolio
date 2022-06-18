@@ -48,6 +48,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-transform: translateY(30vh);
+          transform: translateY(30vh);
 }
 
 .aboutMeContainer .about-label {
@@ -57,15 +59,16 @@ body {
 }
 
 .aboutMeContainer .aboutMe-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 35vh;
-  width: 400px;
+  width: 600px;
+}
+
+.aboutMeContainer .aboutMe-text p {
+  margin: 1em 0;
+  font-size: 14px;
+}
+
+.aboutMeContainer .aboutMe-text p span {
+  color: #CB69C1;
 }
 
 .content-container {

@@ -58,6 +58,7 @@ body {
 
 .projectsContainer {
   display: grid;
+  transform: translateY(30vh);
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 2em;
   padding: 50px;
@@ -68,6 +69,42 @@ body {
   font-size: 1em;
   font-family: "Inter", sans-serif;
 }
+.projectsContainer .card {
+  padding: 10px;
+  background: #17181F;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 14px 14px 47px #0f1015, -14px -14px 47px #1f2029;
+}
+.projectsContainer .card:hover {
+  transition: all 0.3s ease;
+  box-shadow: 25px 25px 58px #090a0c, -25px -25px 58px #252632;
+}
+.projectsContainer .card span {
+  display: block;
+  color: #6C72CB;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.projectsContainer .card h2 {
+  margin-bottom: 0.8em;
+}
+.projectsContainer .card p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.projectsContainer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 250px;
+}
+
 .content-container {
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;

@@ -7,81 +7,76 @@
 body {
   color: #EEEDF0;
   font-size: 1em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #17181F;
 }
 
 .introContainer {
   width: 35vw;
   margin-left: 10em;
-  -webkit-transform: translateY(35vh);
-          transform: translateY(35vh);
+  transform: translateY(35vh);
 }
-
 .introContainer .hello {
   font-size: 1em;
   color: #6C72CB;
 }
-
 .introContainer .name {
   margin-bottom: 8px;
   font-size: 72px;
   color: white;
 }
-
 .introContainer .myPortfolio {
   margin-bottom: 8px;
   font-size: 40px;
   color: #e1dfe4;
 }
-
 .introContainer .generalTxt {
   color: #dcdae0;
 }
 
 .aboutMeContainer {
   margin-left: 10em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-transform: translateY(30vh);
-          transform: translateY(30vh);
+  flex-direction: row;
+  transform: translateY(30vh);
 }
-
 .aboutMeContainer .about-label {
   color: #6C72CB;
   font-size: 32px;
   margin-bottom: 10px;
 }
-
 .aboutMeContainer .aboutMe-details {
   width: 600px;
 }
-
 .aboutMeContainer .aboutMe-text p {
   margin: 1em 0;
   font-size: 14px;
 }
-
 .aboutMeContainer .aboutMe-text p span {
   color: #CB69C1;
 }
 
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2em;
+  padding: 50px;
+}
+.projectsContainer a {
+  text-decoration: none;
+  color: #EEEDF0;
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+}
 .content-container {
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   max-height: 100vh;
 }
-
 .content-container .scroll-area {
   top: 0;
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

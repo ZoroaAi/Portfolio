@@ -73,7 +73,21 @@ body{
 }
 
 // Project Cards
+.projectsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2em;
+    padding: 50px;
 
+    a{
+        text-decoration: none;
+        @include fontStyles;
+    }
+    .card{
+        
+    }
+
+}
 
 
 // For Scroll Snap

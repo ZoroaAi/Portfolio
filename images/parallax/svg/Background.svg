@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+	<title>Background</title>
+	<defs>
+		<radialGradient id="g1" cx="1910.9" cy="2123.2" r="2325" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#a4e5ff"/>
+			<stop offset="1" stop-color="#000014"/>
+		</radialGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+	</style>
+	<path id="Background" class="s0" d="m3839.5 2159.6h-3840v-2160.1h3840z"/>
+</svg>

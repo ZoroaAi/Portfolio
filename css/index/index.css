@@ -78,7 +78,7 @@ body {
 }
 .projectsContainer .card:hover {
   transition: all 0.3s ease;
-  box-shadow: 25px 25px 58px #090a0c, -25px -25px 58px #252632;
+  transform: translate3d(0, -1px, 0);
 }
 .projectsContainer .card span {
   display: block;
@@ -104,6 +104,11 @@ body {
   height: 100%;
   min-height: 250px;
 }
+.projectsContainer .material-icons {
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+}
 
 .content-container {
   overflow-y: scroll;
@@ -115,5 +120,5 @@ body {
   top: 0;
   height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }/*# sourceMappingURL=index.css.map */

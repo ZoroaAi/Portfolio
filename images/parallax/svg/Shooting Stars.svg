@@ -1,0 +1,75 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+	<title>Shooting Stars</title>
+	<defs>
+		<linearGradient id="g1" x1="3189" y1="656.6" x2="3221.6" y2="623.9" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g2" x1="3626.6" y1="485.8" x2="3659.2" y2="453.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g3" x1="3375.6" y1="359.4" x2="3408.2" y2="326.8" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g4" x1="3425.4" y1="690.6" x2="3525.3" y2="590.8" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g5" x1="2790.8" y1="776.3" x2="2985.1" y2="582" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g6" x1="3295.3" y1="590.8" x2="3489.4" y2="396.7" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g7" x1="3469.4" y1="524.6" x2="3563.4" y2="430.6" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g8" x1="3558.6" y1="335.5" x2="3652.6" y2="241.5" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g9" x1="2750.1" y1="1055.1" x2="2990" y2="815.3" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g10" x1="3081.6" y1="569.9" x2="3321.3" y2="330.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="g11" x1="3023.8" y1="407" x2="3263.5" y2="167.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#187dc2"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { mix-blend-mode: screen;fill: url(#g1) } 
+		.s1 { mix-blend-mode: screen;fill: url(#g2) } 
+		.s2 { mix-blend-mode: screen;fill: url(#g3) } 
+		.s3 { mix-blend-mode: screen;fill: url(#g4) } 
+		.s4 { mix-blend-mode: screen;fill: url(#g5) } 
+		.s5 { mix-blend-mode: screen;fill: url(#g6) } 
+		.s6 { mix-blend-mode: screen;fill: url(#g7) } 
+		.s7 { mix-blend-mode: screen;fill: url(#g8) } 
+		.s8 { mix-blend-mode: screen;fill: url(#g9) } 
+		.s9 { mix-blend-mode: screen;fill: url(#g10) } 
+		.s10 { mix-blend-mode: screen;fill: url(#g11) } 
+	</style>
+	<g id="Shooting Stars" style="mix-blend-mode: screen">
+		<path id="&lt;Path&gt;" class="s0" d="m3223.2 625.6l1.1 1-32.4 32c-0.3 0.2-0.8 0.2-1.1 0-0.3-0.3-0.3-0.8 0-1.1z"/>
+		<path id="&lt;Path&gt;" class="s1" d="m3660.8 454.9l1.1 1-32.4 31.9c-0.3 0.3-0.8 0.3-1 0-0.3-0.3-0.3-0.7 0-1z"/>
+		<path id="&lt;Path&gt;" class="s2" d="m3409.9 328.5l1 1-32.4 31.9c-0.3 0.3-0.7 0.3-1 0-0.3-0.3-0.3-0.7 0-1z"/>
+		<path id="&lt;Path&gt;" class="s3" d="m3527.4 593l1 1-99.1 97.7c-0.9 0.9-1.9 1.3-2.1 1.1-0.3-0.3 0.2-1.3 1-2.1z"/>
+		<path id="&lt;Path&gt;" class="s4" d="m2937.5 632.5l49.4-48.7 1.1 1-50.5 49.7z"/>
+		<path id="&lt;Path&gt;" class="s5" d="m3492.2 399.5l1 1-192.6 189.9c-1.8 1.7-3.4 2.8-3.7 2.5-0.3-0.3 0.9-1.9 2.6-3.5z"/>
+		<path id="&lt;Path&gt;" class="s6" d="m3565.4 432.7l0.6 0.5-93.3 92c-0.9 0.8-1.6 1.3-1.8 1.2-0.1-0.2 0.4-0.9 1.3-1.7z"/>
+		<path id="&lt;Path&gt;" class="s7" d="m3654.7 243.6l0.5 0.5-93.3 91.9c-0.8 0.8-1.6 1.4-1.7 1.2-0.2-0.1 0.4-0.9 1.2-1.7z"/>
+		<path id="&lt;Path&gt;" class="s8" d="m2937.5 870.6l54.3-53.5 0.5 0.5-54.8 54z"/>
+		<path id="&lt;Path&gt;" class="s9" d="m3324.5 333.4l0.5 0.5-237.8 234.3c-2.1 2.1-3.9 3.7-4.1 3.5-0.1-0.1 1.5-1.9 3.6-4z"/>
+		<path id="&lt;Path&gt;" class="s10" d="m3266.7 170.4l0.5 0.5-237.8 234.3c-2.1 2.1-4 3.7-4.1 3.6-0.1-0.2 1.5-2 3.6-4.1z"/>
+	</g>
+</svg>

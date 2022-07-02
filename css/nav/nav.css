@@ -1,20 +1,8 @@
 .navBar {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  transition: all 0.3s ease;
-}
-.navBar:before {
-  content: " ";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  background-color: #6C72CB;
-  height: 120px;
+  height: 5em;
   transition: all 0.3s ease;
 }
 

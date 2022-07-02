@@ -115,6 +115,7 @@ body {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   max-height: 100vh;
+  max-width: 100vw;
 }
 .content-container .scroll-area {
   top: 0;

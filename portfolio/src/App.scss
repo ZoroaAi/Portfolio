@@ -1,14 +1,28 @@
+@use './styles/mixins' as m;
 
 body{
   background-color: rgb(31, 30, 33);
+  margin: 0;
 }
 
-.app{
+.app {
+  display: flex;
+}
+
+.content {
+  margin-left: 5em;
+  width: calc(100vw - 5em);
+  padding: 20px;
+  overflow: auto;
+}
+
+.intro{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.intro{
-  color: aliceblue;
+.intro-text{
+  @include m.textStyle();
 }
+

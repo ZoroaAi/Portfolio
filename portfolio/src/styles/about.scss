@@ -1,0 +1,25 @@
+@use 'mixins' as m;
+
+.aboutMe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+
+    height: 100vh;
+
+    @include m.textStyle();
+    .about-info{
+        width: 45%;
+        h2{
+            font-size: 1.5em;
+            color: aliceblue;
+            text-decoration: underline;  
+        }
+    }
+
+    .about-img{
+        // display: flex;
+        // justify-content: space-between;
+    }
+}

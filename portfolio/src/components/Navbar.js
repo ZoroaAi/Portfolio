@@ -16,7 +16,7 @@ function Navbar(){
                 </ul>
             </div>
             <div className="navbar-bottom">
-                <button type="button">Email me</button>
+                <button type="button">Email Me</button>
             </div>
         </div>
     )

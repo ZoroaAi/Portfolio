@@ -1,6 +1,5 @@
-
+@use 'helpers' as h;
 
 @mixin textStyle(){
-    color: aliceblue;
-    
+    color: h.$text-colour;
 }

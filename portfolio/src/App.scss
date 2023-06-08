@@ -7,13 +7,14 @@ body{
 
 .app {
   display: flex;
+  flex-direction: column;
 }
 
 .content {
-  margin-left: 5em;
-  width: calc(100vw - 5em);
-  padding: 20px;
-  overflow: auto;
+  width: 100%; 
+  height: calc(100vh - 5em); 
+  overflow: unset; 
+  scrollbar-width: none;
 }
 
 .intro{
@@ -23,6 +24,6 @@ body{
   height: 100vh;
 }
 .intro-text{
-  @include m.textStyle();
+  color: aliceblue;
 }
 

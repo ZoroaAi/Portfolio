@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
         </div>
         <div className='projects'>
           <Projects/>
+        </div>
+        <div className='skills-container'>
+          <Skills/>
         </div>
       </div>
     </div>

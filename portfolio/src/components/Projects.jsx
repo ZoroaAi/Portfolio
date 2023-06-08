@@ -4,7 +4,7 @@ import List from './ProjectList';
 import '../styles/projects.scss';
 
 function Projects() {
-    const [projects, setProjects] = useState(List);
+    const [projects] = useState(List);
     
     return (
         <div className='portfolio-grid'>

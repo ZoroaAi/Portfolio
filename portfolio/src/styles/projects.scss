@@ -9,8 +9,9 @@
     .project-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        gap: 1.875em;
-        
+        column-gap: 10em;
+        row-gap: 4em;
+
         .project-card{
             width: 400px;
         }

@@ -2,6 +2,7 @@ import './App.scss';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
+import Projects from './components/Projects'
 
 function App() {
 
@@ -14,6 +15,9 @@ function App() {
         </div>
         <div className="aboutMe">
           <AboutMe/>
+        </div>
+        <div className='projects'>
+          <Projects/>
         </div>
       </div>
     </div>

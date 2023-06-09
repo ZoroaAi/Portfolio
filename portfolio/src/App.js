@@ -2,8 +2,9 @@ import './App.scss';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
-import Projects from './components/Projects'
-import Skills from './components/Skills'
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         </div>
         <div className='skills-container'>
           <Skills/>
+        </div>
+        <div className='contact'>
+          <Contact/>
         </div>
       </div>
     </div>

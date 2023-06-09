@@ -1,6 +1,10 @@
-import {useState} from 'react';
 import React from 'react';
+import {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+
 import List from './ProjectList';
+
 import '../styles/projects.scss';
 
 function Projects() {
@@ -20,11 +24,15 @@ function Projects() {
                                 <div className='project-mask'></div>
                             </div>
 
-                            <h3 className="project-title">{title}</h3>
+                            <h3 className="project-title">
+                                {title}
+                                <a href={projectURL} className="project-button">
+                                    <span>
+                                        <FontAwesomeIcon icon={faLink} style={{color: "#f5efef",}}/>
+                                    </span>
+                                </a>
+                            </h3>
                             <h4 className="project-desc">{description}</h4>
-                            <a href={projectURL} className="project-button">
-                                <i className='icon-link project-button-icon'></i>
-                            </a>
                         </div>
                     )
                 })}

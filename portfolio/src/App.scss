@@ -1,7 +1,8 @@
+@use './styles/helpers' as h;
 @use './styles/mixins' as m;
 
 body{
-  background-color: rgb(31, 30, 33);
+  background-color: h.$bg-colour;
   margin: 0;
 }
 

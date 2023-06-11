@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <Navbar/>
-      <Parallax pages={8}>
+      <Parallax pages={4.2}>
         <ParallaxLayer offset={0} speed={0.5}>
           <div className="content">
             <div className="intro">

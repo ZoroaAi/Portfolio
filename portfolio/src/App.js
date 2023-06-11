@@ -7,14 +7,16 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { useRef } from 'react';
 
 function App() {
+  const parallax = useRef(null);
 
   return (
     <div className="app">
       <Navbar/>
-      <Parallax pages={4.2}>
+      <Parallax pages={4}>
         <ParallaxLayer offset={0} speed={0.5}>
           <div className="content">
             <div className="intro">

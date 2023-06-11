@@ -7,31 +7,37 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
 function App() {
 
   return (
     <div className="app">
       <Navbar/>
-      <div class="content">
-        <div className="intro">
-          <Landing/>
-        </div>
-        <div className="aboutMe">
-          <AboutMe/>
-        </div>
-        <div className='projects'>
-          <Projects/>
-        </div>
-        <div className='skills-container'>
-          <Skills/>
-        </div>
-        <div className='contact'>
-          <Contact/>
-        </div>
-        <div className='footer'>
-          <Footer/>
-        </div>
-      </div>
+      <Parallax pages={8}>
+        <ParallaxLayer offset={0} speed={0.5}>
+          <div className="content">
+            <div className="intro">
+              <Landing/>
+            </div>
+            <div className="aboutMe">
+              <AboutMe/>
+            </div>
+            <div className='projects'>
+              <Projects/>
+            </div>
+            <div className='skills-container'>
+              <Skills/>
+            </div>
+            <div className='contact'>
+              <Contact/>
+            </div>
+            <div className='footer'>
+              <Footer/>
+            </div>
+          </div>
+        </ParallaxLayer>
+      </Parallax>
     </div>
   );
 }

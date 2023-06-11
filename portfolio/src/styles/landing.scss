@@ -1,0 +1,17 @@
+
+
+.animation {
+    display: block;
+    position: relative;
+    z-index: 10;
+
+    .animation_layer {
+        width: 100%; 
+        height: calc(100vh - 5em); 
+        overflow: unset; 
+        background-position: bottom center;
+        background-size: auto 1080px;
+        background-repeat: repeat-x;
+        position: absolute;
+    }
+}

@@ -14,33 +14,17 @@ import { ParallaxLayer } from "@react-spring/parallax";
 function Landing(){
     return(
       <>
-      <ParallaxLayer offset={0} speed={0.3}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${bg})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.5}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${sun})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={1.5} factor={2}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${birds})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.8}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${moutain1})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.6}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${moutain2})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.4}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${tree1})`}}></div>
-      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.3} style={{ backgroundImage: `url(${bg})`}} />
+      <ParallaxLayer offset={0} speed={0.5} style={{ backgroundImage: `url(${sun})`}} />
+      <ParallaxLayer offset={0} speed={1.5} factor={2} style={{ backgroundImage: `url(${birds})`}} />
+      <ParallaxLayer offset={0} speed={0.8} style={{ backgroundImage: `url(${moutain1})`}}/>
+      <ParallaxLayer offset={0} speed={0.6} style={{ backgroundImage: `url(${moutain2})`}}/>
+      <ParallaxLayer offset={0} speed={0.4} style={{ backgroundImage: `url(${tree1})`}} />
       <ParallaxLayer offset={0} speed={0.2}>
           <h1 className="intro-text">Hi! I'm Saurav.</h1>
       </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.9}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${ground})`}}></div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.7}>
-          <div className='animation_layer' style={{ backgroundImage: `url(${tree2})`}}></div>
-      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.9} style={{ backgroundImage: `url(${ground})`}} />
+      <ParallaxLayer offset={0} speed={0.7} style={{ backgroundImage: `url(${tree2})`}} />
       </>
     )
 }

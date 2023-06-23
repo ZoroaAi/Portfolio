@@ -19,19 +19,19 @@ function App() {
       <Parallax pages={4}>
         <ParallaxLayer offset={0} speed={0.5}>
           <div className="content">
-            <div className="intro">
+            <div className="intro" id='intro-section'>
               <Landing/>
             </div>
-            <div className="aboutMe">
+            <div className="aboutMe" id='aboutMe-section'>
               <AboutMe/>
             </div>
-            <div className='projects'>
+            <div className='projects' id='project-section'>
               <Projects/>
             </div>
-            <div className='skills-container'>
+            <div className='skills-container' id='skills-section'>
               <Skills/>
             </div>
-            <div className='contact'>
+            <div className='contact' id='contact-section'>
               <Contact/>
             </div>
             <div className='footer'>

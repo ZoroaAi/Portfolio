@@ -1,6 +1,6 @@
-import VotingSystem from '../images/VotingSystem.png';
-import Meliora from '../images/MelioraMarket.png';
-import EFS from '../images/EFS.jpg';
+import VotingSystem from '../assets/projects/VotingSystem.png';
+import Meliora from '../assets/projects/MelioraMarket.png';
+import EFS from '../assets/projects/EFS.jpg';
 
 const ProjectList = [
     {

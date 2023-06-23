@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faAddressCard, faListCheck, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/navbar.scss'
-import logo from '../images/Logo.png'
+import logo from '../assets/Logo.png'
 
 function Navbar(){
     const handleClick = (event, targetId) => {

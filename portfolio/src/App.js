@@ -1,4 +1,6 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
+
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import AboutMe from './components/AboutMe';
@@ -6,41 +8,26 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import { useRef } from 'react';
+import StarCanvas from './components/StarCanvas.jsx';
 
 function App() {
-  const parallax = useRef(null);
-
   return (
-    <div className="app">
-      <Navbar/>
-      <Parallax pages={4}>
-        <ParallaxLayer offset={0} speed={0.5}>
-          <div className="content">
-            <div className="intro" id='intro-section'>
-              <Landing/>
-            </div>
-            <div className="aboutMe" id='aboutMe-section'>
-              <AboutMe/>
-            </div>
-            <div className='projects' id='project-section'>
-              <Projects/>
-            </div>
-            <div className='skills-container' id='skills-section'>
-              <Skills/>
-            </div>
-            <div className='contact' id='contact-section'>
-              <Contact/>
-            </div>
-            <div className='footer'>
-              <Footer/>
-            </div>
-          </div>
-        </ParallaxLayer>
-      </Parallax>
-    </div>
+    <BrowserRouter>
+      <div>
+        <div className='hero'>
+          <Navbar/>
+          <Landing/>
+        </div>
+        <AboutMe />
+        <Projects />
+        <Skills />
+        <div class="contact-section">
+          <Contact />
+          <StarCanvas />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

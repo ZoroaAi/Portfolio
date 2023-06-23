@@ -15,16 +15,14 @@ import {
     git,
     figma,
     docker,
-    meta,
     starbucks,
     tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    efs,
+    meliora,
+    votingSys,
     threejs,
-  } from "../assets";
-  
+} from "../assets";
+
 export const navLinks = [
     {
         id: "about",
@@ -162,7 +160,7 @@ const projects = [
             color: "pink-text-gradient",
         },
         ],
-        image: carrent,
+        image: efs,
         source_code_link: "https://github.com/",
     },
     {
@@ -183,7 +181,7 @@ const projects = [
             color: "pink-text-gradient",
         },
         ],
-        image: jobit,
+        image: meliora,
         source_code_link: "https://github.com/",
     },
     {
@@ -204,7 +202,7 @@ const projects = [
             color: "pink-text-gradient",
         },
         ],
-        image: tripguide,
+        image: votingSys,
         source_code_link: "https://github.com/",
     },
 ];

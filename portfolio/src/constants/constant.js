@@ -1,22 +1,11 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
-    redux,
-    tailwind,
     nodejs,
-    mongodb,
     git,
     figma,
-    docker,
-    starbucks,
-    tesla,
     efs,
     meliora,
     votingSys,
@@ -25,12 +14,16 @@ import {
 
 export const navLinks = [
     {
+        id: "home",
+        title: "Home",
+    },
+    {
         id: "about",
         title: "About",
     },
     {
-        id: "work",
-        title: "Work",
+        id: "projects",
+        title: "Projects",
     },
     {
         id: "contact",
@@ -41,19 +34,19 @@ export const navLinks = [
 const services = [
     {
         title: "Web Developer",
-        icon: web,
+        icon: '',
     },
     {
         title: "React Native Developer",
-        icon: mobile,
+        icon: '',
     },
     {
         title: "Backend Developer",
-        icon: backend,
+        icon: '',
     },
     {
         title: "Content Creator",
-        icon: creator,
+        icon: '',
     },
 ];
 
@@ -72,7 +65,7 @@ const technologies = [
     },
     {
         name: "TypeScript",
-        icon: typescript,
+        icon: '',
     },
     {
         name: "React JS",
@@ -80,11 +73,11 @@ const technologies = [
     },
     {
         name: "Redux Toolkit",
-        icon: redux,
+        icon: '',
     },
     {
         name: "Tailwind CSS",
-        icon: tailwind,
+        icon: '',
     },
     {
         name: "Node JS",
@@ -92,7 +85,7 @@ const technologies = [
     },
     {
         name: "MongoDB",
-        icon: mongodb,
+        icon: '',
     },
     {
         name: "Three JS",
@@ -108,7 +101,7 @@ const technologies = [
     },
     {
         name: "docker",
-        icon: docker,
+        icon: '',
     },
 ];
 
@@ -116,7 +109,7 @@ const experiences = [
     {
         title: "React.js Developer",
         company_name: "Starbucks",
-        icon: starbucks,
+        icon: '',
         iconBg: "#383E56",
         date: "March 2020 - April 2021",
         points: [
@@ -129,7 +122,7 @@ const experiences = [
     {
         title: "React Native Developer",
         company_name: "Tesla",
-        icon: tesla,
+        icon: '',
         iconBg: "#E6DEDD",
         date: "Jan 2021 - Feb 2022",
         points: [

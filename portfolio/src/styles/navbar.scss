@@ -31,7 +31,7 @@ html{
         text-decoration: none;
 
         &:hover{
-            color: yellow;
+            color: #b98bb0;
         }
     }
 
@@ -65,5 +65,10 @@ html{
     }
 }
   
+.mobile-menu{
+    display: none;
+}
 
-  
+@media screen {
+    
+}

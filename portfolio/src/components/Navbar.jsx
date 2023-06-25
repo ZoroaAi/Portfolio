@@ -11,8 +11,8 @@ import { logo, menu, close} from '../assets';
 function Navbar(){
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState();
-    const [scrolled, setScrolled] = useState(false);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleResize = () => setIsMobileView(window.innerWidth <= 768);
@@ -57,40 +57,27 @@ function Navbar(){
                             </li>
                         ))}
 
-                        {/* <li>
-                            <a href="#intro-section" onClick={(event) => handleClick(event, 'intro-section')}>
-                                <FontAwesomeIcon icon={faHouse}/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#aboutMe-section" onClick={(event) => handleClick(event, 'aboutMe-section')}>
-                                <FontAwesomeIcon icon={faAddressCard} />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#project-section" onClick={(event) => handleClick(event, 'project-section')}>
-                                <FontAwesomeIcon icon={faListCheck} />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact-section" onClick={(event) => handleClick(event, 'contact-section')}>
-                                <FontAwesomeIcon icon={faAddressBook} />
-                            </a>
-                        </li> */}
                     </ul>
 
                 </div>
-                <div className="navbar-bottom">
+                {/* <div className="navbar-bottom">
                     <button type="button">Email Me</button>
-                </div>
+                </div> */}
             </div>
 
-            <div className="mobile-menu">
-            {isMobileView && (
-                <button onClick={() => setToggle(!toggle)}>
-                <img src={toggle ? close : menu} alt="toggle menu" />
-                </button>
-            )}
+            <div className={`mobile-menu ${toggle ? 'open' : ''}`}>
+                <div>
+                    <button onClick={() => setToggle(!toggle)}>
+                        <img src={toggle ? close : menu} alt="toggle menu" />
+                    </button>
+                    <ul>
+                        {navLinks.map((link) => (
+                        <li key={link.id} onClick={() => setActive(link.title)}>
+                            <a href={link.id}>{link.title}</a>
+                        </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </nav>
     )

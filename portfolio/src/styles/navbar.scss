@@ -65,10 +65,20 @@ html{
     }
 }
   
-.mobile-menu{
+.mobile-menu {
     display: none;
-}
 
-@media screen {
-    
+    @media (max-width: 768px) {
+        display: block;
+
+        ul {
+        display: none;
+        }
+    }
+
+    &.open {
+        ul {
+        display: block;
+        }
+    }
 }

@@ -5,8 +5,6 @@
     grid-template-columns: repeat(auto-fit, minmax(555px,1fr));
     place-items: center;
 
-    // margin: 0 2em 0 2em;
-
     height: 100vh;
 
     @include m.textStyle();

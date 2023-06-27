@@ -4,16 +4,15 @@
 .portfolio-grid{
     @include m.textStyle();
 
-    margin: 0 5em 0 5em;
-
     .project-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        column-gap: 10em;
+        grid-template-columns: repeat(auto-fit, minmax(555px, 1fr));
+        column-gap: 3em;
         row-gap: 4em;
 
         .project-card{
-            width: 400px;
+            width: 100%;
+            padding: 0 auto;
         }
     }
     img{

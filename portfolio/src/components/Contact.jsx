@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 import '../styles/contact.scss';
+import { SectionWrapper } from '../hoc';
 
 function Contact() {
     const [fromName, setFromName] = useState("");
@@ -50,4 +52,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default SectionWrapper(Contact, 'contact');

@@ -3,3 +3,36 @@
 @mixin textStyle(){
     color: h.$text-colour;
 }
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+
+@mixin paddingXsm {
+    @media (min-width: map-get($breakpoints, sm)){
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+@mixin paddingY {
+    @media (min-width: map-get($breakpoints, sm)){
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+@mixin padding {
+    @media (min-width: map-get($breakpoints, sm)){
+        padding: 16px;
+    }
+    padding: 6px;
+}

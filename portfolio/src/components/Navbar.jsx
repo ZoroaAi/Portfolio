@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink} from 'react-scroll';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faAddressCard, faListCheck, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHouse, faAddressCard, faListCheck, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/navbar.scss';
 import { navLinks } from '../constants/constant';
@@ -42,21 +43,30 @@ function Navbar(){
         <nav>
             <div className="navbar">
                 <div className="navbar-top">
-                    <Link to='/' onClick={() => {
+                    <RouterLink to='/' onClick={() => {
                         setActive("");
                         window.scrollTo(0,0);
                     }}>
                         <img src={logo} alt="logo" className="logo"/>
-                    </Link>
+                    </RouterLink>
                 </div>
                 <div className="navbar-middle">
                     <ul>
                         {navLinks.map((link) => (
-                            <li key={link.id} onClick={() => setActive(link.title)}>
-                                <a href={link.id}>{link.title}</a>
+                            <li key={link.id}> 
+                                <ScrollLink
+                                    activeClass="active"
+                                    to={link.id}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-20}
+                                    duration={500}
+                                    onClick={() => setActive(link.title)}
+                                >
+                                    {link.title}
+                                </ScrollLink>
                             </li>
                         ))}
-
                     </ul>
 
                 </div>
@@ -72,8 +82,18 @@ function Navbar(){
                     </button>
                     <ul>
                         {navLinks.map((link) => (
-                        <li key={link.id} onClick={() => setActive(link.title)}>
-                            <a href={link.id}>{link.title}</a>
+                        <li key={link.id}> 
+                            <ScrollLink
+                                activeClass="active"
+                                to={link.id}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                onClick={() => setActive(link.title)}
+                            >
+                                {link.title}
+                            </ScrollLink>
                         </li>
                         ))}
                     </ul>

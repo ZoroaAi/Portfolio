@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 import List from './ProjectList';
+import { SectionWrapper } from '../hoc';
 
 import '../styles/projects.scss';
 
@@ -42,4 +43,4 @@ function Projects() {
 }
 
 
-export default Projects;
+export default SectionWrapper(Projects, 'projects');

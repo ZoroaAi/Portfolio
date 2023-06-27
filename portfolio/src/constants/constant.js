@@ -6,9 +6,9 @@ import {
     nodejs,
     git,
     figma,
-    efs,
-    meliora,
-    votingSys,
+    EFS,
+    Meliora,
+    VotingSystem,
     threejs,
 } from "../assets";
 
@@ -136,33 +136,33 @@ const experiences = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Merliora Market",
         description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "A price comparison website for UK supermarkets. All data was web scraped using selenium and presented to website using Flask framework.",
         tags: [
         {
-            name: "react",
+            name: "python",
             color: "blue-text-gradient",
         },
         {
-            name: "mongodb",
+            name: "flask",
             color: "green-text-gradient",
         },
         {
-            name: "tailwind",
+            name: "scss",
             color: "pink-text-gradient",
         },
         ],
-        image: efs,
-        source_code_link: "https://github.com/",
+        image: EFS,
+        source_code_link: "https://github.com/ZoroaAi/MelioraMarket",
     },
     {
-        name: "Job IT",
+        name: "Education Fund Scheme",
         description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A website that finds the poorest schools in the UK in order to raise funds and provide educational material.",
         tags: [
         {
-            name: "react",
+            name: "django",
             color: "blue-text-gradient",
         },
         {
@@ -174,29 +174,29 @@ const projects = [
             color: "pink-text-gradient",
         },
         ],
-        image: meliora,
+        image: Meliora,
         source_code_link: "https://github.com/",
     },
     {
-        name: "Trip Guide",
+        name: "Rule Change Proposal System",
         description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Built for creating rule change proposal that allows votes and comments using Java EE 8.",
         tags: [
         {
-            name: "nextjs",
+            name: "javaEE",
             color: "blue-text-gradient",
         },
         {
-            name: "supabase",
+            name: "JPA",
             color: "green-text-gradient",
         },
         {
-            name: "css",
+            name: "bootstrap",
             color: "pink-text-gradient",
         },
         ],
-        image: votingSys,
-        source_code_link: "https://github.com/",
+        image: VotingSystem,
+        source_code_link: "https://github.com/ZoroaAi/VotingSystem",
     },
 ];
 

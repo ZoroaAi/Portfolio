@@ -1,4 +1,5 @@
 import '../styles/about.scss';
+import { SectionWrapper } from '../hoc';
 
 function AboutMe(){
     return(
@@ -17,4 +18,4 @@ function AboutMe(){
     )
 }
 
-export default AboutMe;
+export default SectionWrapper(AboutMe, 'about');

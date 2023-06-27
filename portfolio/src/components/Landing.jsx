@@ -2,6 +2,8 @@
 import person from '../assets/parallax/person.svg';
 import '../styles/landing.scss';
 
+import { SectionWrapper } from '../hoc';
+
 function Landing(){
     return(
       <>
@@ -13,4 +15,4 @@ function Landing(){
     )
 }
 
-export default Landing;
+export default SectionWrapper(Landing, 'home');

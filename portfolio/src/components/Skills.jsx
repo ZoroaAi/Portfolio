@@ -1,4 +1,5 @@
-import '../styles/skills.scss'
+import '../styles/skills.scss';
+import { SectionWrapper } from '../hoc';
 
 function Skills(){
     return(
@@ -13,4 +14,4 @@ function Skills(){
     )
 }
 
-export default Skills;
+export default SectionWrapper(Skills, 'skills');

@@ -12,9 +12,9 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import threejs from "./tech/threejs.svg";
 
-import efs from "./projects/EFS.jpg";
-import meliora from "./projects/MelioraMarket.png";
-import votingSys from "./projects/VotingSystem.png";
+import EFS from "./projects/EFS.jpg";
+import Meliora from "./projects/MelioraMarket.png";
+import VotingSystem from "./projects/VotingSystem.png";
 
 export {
   logo,
@@ -29,7 +29,7 @@ export {
   nodejs,
   reactjs,
   threejs,
-  efs,
-  meliora,
-  votingSys,
+  EFS,
+  Meliora,
+  VotingSystem,
 };

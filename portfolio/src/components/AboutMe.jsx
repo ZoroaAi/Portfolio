@@ -1,4 +1,6 @@
 import '../styles/about.scss';
+
+import { RoomCanvas } from './canvas/RoomModel.jsx';
 import { SectionWrapper } from '../hoc';
 
 function AboutMe(){
@@ -12,7 +14,7 @@ function AboutMe(){
                 </p>
             </div>
             <div className="about-img">
-                <div>Placeholder for 3d image</div>
+                <RoomCanvas/>
             </div>
         </div>
     )

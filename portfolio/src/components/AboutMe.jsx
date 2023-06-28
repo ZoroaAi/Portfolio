@@ -1,7 +1,49 @@
-import '../styles/about.scss';
+import { Suspense, useEffect, useState} from 'react'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF, Box } from '@react-three/drei';
 
-import { RoomCanvas } from './canvas/RoomModel.jsx';
+import CanvasLoader from './Loader';
+
+import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
+
+const Room = () => {
+    const room = useGLTF('/models/room/room_model.glb')
+    room.scene.scale.set(6, 6, 6);
+    return (
+        <mesh>
+        <hemisphereLight 
+            intensity={0.15} 
+            groundColor={"black"}
+        />
+        <pointLight intensity={1}/>
+        <primitive 
+            object={room.scene}
+        />
+        </mesh>
+    )
+}
+
+const RoomModel = () => {
+    return (
+        <Canvas 
+        frameLoop='demand'
+        shadows
+        camera={{position: [20,3,5], fov: 25}}
+        gl={{preserveDrawingBuffer: true}}
+        >
+        <Suspense fallback={<CanvasLoader/>} >
+            <OrbitControls 
+            enableZoom= {false}
+            maxPolarAngle= {Math.PI / 2}
+            minPolarAngle= {Math.PI / 2}
+            />
+            <Room />
+        </Suspense>
+        <Preload all />
+        </Canvas>
+    )
+}
 
 function AboutMe(){
     return(
@@ -14,7 +56,7 @@ function AboutMe(){
                 </p>
             </div>
             <div className="about-img">
-                <RoomCanvas/>
+                <RoomModel/>
             </div>
         </div>
     )

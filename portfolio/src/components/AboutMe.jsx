@@ -10,7 +10,7 @@ import Loader from './Loader';
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
 
-const Room = () => {
+const Room = (isMobile) => {
     const room = useGLTF('/models/room/room_model.glb');
     const dirLightRef = useRef();
     const spotLightRef = useRef();
@@ -72,7 +72,7 @@ const Room = () => {
         />
         <primitive 
             object={room.scene}
-            scale={5}
+            scale={isMobile ? 4 : 5}
             position={[0,-3.25,-1.5]}
         />
         </mesh>
@@ -80,6 +80,24 @@ const Room = () => {
 }
 
 const RoomModel = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect( () => {
+        const mediaQuery = window.matchMedia('(max-width:500px)');
+
+        setIsMobile(mediaQuery.matches);
+
+        const handleMediaQueryChange = (event) => {
+            setIsMobile(event.matches);
+        }
+
+        mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaQueryChange);
+        }
+    }, [])
+
     return (
         <Canvas 
             frameLoop='demand'
@@ -95,7 +113,7 @@ const RoomModel = () => {
             maxAzimuthAngle= {Math.PI / 4}
             minAzimuthAngle= {Math.PI / 4}
             />
-            <Room />
+            <Room isMobile={isMobile} />
         </Suspense>
         <Preload all />
         </Canvas>

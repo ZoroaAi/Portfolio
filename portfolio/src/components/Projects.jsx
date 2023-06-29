@@ -45,6 +45,17 @@ const ProjectCard = ({index, name, description, tags, image, link}) => {
                     </h3> 
                     <p>{description}</p>
                 </div>
+
+                <div className='card_tags'>
+                    {tags.map((tag) => (
+                        <p
+                        key={`${name}-${tag.name}`}
+                        className={`tag_colour ${tag.color}`}
+                        >
+                        #{tag.name}
+                        </p>
+                    ))}
+                </div>
             </Tilt>
         </motion.div>
     )

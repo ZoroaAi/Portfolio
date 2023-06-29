@@ -142,15 +142,15 @@ const projects = [
         tags: [
         {
             name: "python",
-            color: "blue-text-gradient",
+            color: "text-blue",
         },
         {
             name: "flask",
-            color: "green-text-gradient",
+            color: "text-green",
         },
         {
             name: "scss",
-            color: "pink-text-gradient",
+            color: "text-pink",
         },
         ],
         image: EFS,
@@ -163,15 +163,15 @@ const projects = [
         tags: [
         {
             name: "django",
-            color: "blue-text-gradient",
+            color: "text-blue",
         },
         {
             name: "restapi",
-            color: "green-text-gradient",
+            color: "text-green",
         },
         {
             name: "scss",
-            color: "pink-text-gradient",
+            color: "text-pink",
         },
         ],
         image: Meliora,
@@ -184,15 +184,15 @@ const projects = [
         tags: [
         {
             name: "javaEE",
-            color: "blue-text-gradient",
+            color: "text-blue",
         },
         {
             name: "JPA",
-            color: "green-text-gradient",
+            color: "text-green",
         },
         {
             name: "bootstrap",
-            color: "pink-text-gradient",
+            color: "text-pink",
         },
         ],
         image: VotingSystem,

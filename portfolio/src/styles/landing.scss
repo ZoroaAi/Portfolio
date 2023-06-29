@@ -1,4 +1,36 @@
+@use './_mixins.scss' as m;
+@use './_helpers.scss' as h;
 
+.scroll_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    @include m.buttonBottom();
+
+    .button{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 16px;
+      height: 32px;
+      padding: 2px;
+      border: 2px solid h.$scroll-button;
+      border-radius: 1.5rem;
+
+      .button_circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: h.$scroll-button;
+        border-color: h.$scroll-button;
+      }
+    }
+
+}
 
 @keyframes bob {
     0% { transform: translateY(0); }

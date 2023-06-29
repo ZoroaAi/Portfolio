@@ -43,3 +43,13 @@ $breakpoints: (
     padding: 6px;
     margin: 0 5em;
 }
+
+@mixin buttonBottom {
+    @media (min-width: map-get($breakpoints, xs)) {
+        bottom: 10px;
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        bottom: 16px;
+    }
+    bottom: 32px;
+}

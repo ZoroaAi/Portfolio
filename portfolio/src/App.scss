@@ -8,11 +8,12 @@ body{
 
 .hero{
   height: 100vh;
+
+  .intro-text{
+    color: aliceblue;
+  }
 }
 
-.intro-text{
-  color: aliceblue;
-}
 
 .section__wrapper:not(:last-child){
   @include m.sectionPadding();

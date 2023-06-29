@@ -53,3 +53,29 @@ $breakpoints: (
     }
     bottom: 32px;
 }
+
+@mixin sectionHeadText{
+    color: h.$text-colour;
+    font-size: 30px;
+
+    @media (min-width: map-get($breakpoints, xs)) {
+        font-size: 1.25em;
+    }
+    @media (min-width: map-get($breakpoints, sm)) {
+        font-size: 1.5em;
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        font-size: 2em;
+    }
+}
+
+@mixin sectionSubText{
+    font-size: 0.6em;
+    color: h.$text-colour-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        font-size: 0.8em;
+    }
+}

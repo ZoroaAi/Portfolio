@@ -1,46 +1,62 @@
-import React from 'react';
 import {useState} from 'react';
+import { Tilt } from 'react-tilt';
+import { motion } from 'framer-motion';
+
+import { github } from '../assets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
-import List from './ProjectList';
 import { SectionWrapper } from '../hoc';
+import { projects } from '../constants/constant';
+import { fadeIn, textVariant } from '../utils/motion';
 
 import '../styles/projects.scss';
 
-function Projects() {
-    const [projects] = useState(List);
-    
+const ProjectCard = (index, name, description, tags, image, link) => {
     return (
-        <div className='portfolio-grid'>
-            <h2 className='section-title'>Projects</h2>
+        <motion.div variants={fadeIn('up', 'spring', index*0.5, 0.75)}>
+            test
+        </motion.div>
+    )
+}
 
-            <div className='project-container'>
-                {projects.map((elem) => {
-                    const{ id, title, description, imgURL, projectURL} = elem;
-                    return (
-                        <div className='project-card' key={id}>
-                            <div className='project-thumbnail'>
-                                <img src={imgURL} className='project-img' alt='' />
-                                <div className='project-mask'></div>
-                            </div>
+function Projects() {
+    return (
+        <>
+            <motion.div className='myProjects' variants={textVariant()}>
+                <p>
+                    My work
+                </p>
+                <h2>
+                    Projects.
+                </h2>
+            </motion.div>
 
-                            <h3 className="project-title">
-                                {title}
-                                <a href={projectURL} className="project-button">
-                                    <span>
-                                        <FontAwesomeIcon icon={faLink} style={{color: "#f5efef",}}/>
-                                    </span>
-                                </a>
-                            </h3>
-                            <h4 className="project-desc">{description}</h4>
-                        </div>
-                    )
-                })}
+            <div className="project_desc">
+                <motion.p
+                    variants={fadeIn('','',0.1,1)}
+                    className='description'
+                >
+                    The following projects showcase my skills and experience 
+                    gathered through real-world examples of my work. Each 
+                    project is briefly described with links to the code 
+                    repositories. It reflects my ability to solve problems and 
+                    work with different technologies, and manage projects effectively. 
+                </motion.p>
             </div>
-        </div> 
+
+            <div className="project_cards">
+                {projects.map((project, index) => (
+                    <ProjectCard 
+                        key={'project-${index}'}
+                        index={index}
+                        {...project}
+                    />
+                ))}
+            </div>
+        </>
     );
 }
 
 
-export default SectionWrapper(Projects, 'projects');
+export default SectionWrapper(Projects, '');

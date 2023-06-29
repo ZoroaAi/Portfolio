@@ -154,7 +154,7 @@ const projects = [
         },
         ],
         image: EFS,
-        source_code_link: "https://github.com/ZoroaAi/MelioraMarket",
+        link: "https://github.com/ZoroaAi/MelioraMarket",
     },
     {
         name: "Education Fund Scheme",
@@ -175,7 +175,7 @@ const projects = [
         },
         ],
         image: Meliora,
-        source_code_link: "https://github.com/",
+        link: "https://github.com/",
     },
     {
         name: "Rule Change Proposal System",
@@ -196,7 +196,7 @@ const projects = [
         },
         ],
         image: VotingSystem,
-        source_code_link: "https://github.com/ZoroaAi/VotingSystem",
+        link: "https://github.com/ZoroaAi/VotingSystem",
     },
 ];
 

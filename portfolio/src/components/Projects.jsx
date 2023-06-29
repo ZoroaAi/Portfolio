@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { github } from '../assets';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-solid-svg-icons';
 
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants/constant';
@@ -12,10 +12,40 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 import '../styles/projects.scss';
 
-const ProjectCard = (index, name, description, tags, image, link) => {
+const ProjectCard = ({index, name, description, tags, image, link}) => {
     return (
         <motion.div variants={fadeIn('up', 'spring', index*0.5, 0.75)}>
-            test
+            <Tilt 
+                options={{
+                    max: 45,
+                    scale: 1.03,
+                    speed: 450
+                }}
+                className='tilt'
+            >
+                <div className="card_img_wrapper">
+                    <img 
+                        src={image} 
+                        alt={name} 
+                        className='card_img'
+                    />
+                </div>
+
+                <div className="card_desc">
+                    <h3>
+                        {name}  
+                        <span>
+                            <img 
+                                src={github} 
+                                alt="github_icon" 
+                                className='github_icon' 
+                                onClick={() => window.open(link, '_blank')}
+                            />
+                        </span>
+                    </h3> 
+                    <p>{description}</p>
+                </div>
+            </Tilt>
         </motion.div>
     )
 }

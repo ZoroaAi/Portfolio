@@ -126,6 +126,7 @@ function AboutMe(){
     return(
         <div className="aboutMe">
             <motion.div className="about-info" variants={textVariant()}>
+                <p className='about_subText'>Who I Am</p>
                 <h2>About Me.</h2>
                 <p>Hello, I'm Saurav KC, soon to be graduating with a degree in Computer Science from the University of Portsmouth. My journey in this diverse field has led me to discover a increasing appreciation for the art and science of web design and development.
                 <br/><br/>This passion isn't just theoretical, it has driven me to explore a wide variety of tech stacks and apply them in practical settings, making each project a unique blend of creativity and functionality.

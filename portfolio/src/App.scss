@@ -22,5 +22,5 @@ body{
 
 .section__wrapper:not(:last-child){
   @include m.sectionPadding();
-  margin: 0 3em;
+  margin: 0 10em;
 }

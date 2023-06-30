@@ -40,8 +40,12 @@ $breakpoints: (
         padding: 16px;
         margin: 0 2em;
     }
+    @media (min-width: map-get($breakpoints, md)){
+        padding: 16px;
+        margin: 0 5em;
+    }
     padding: 6px;
-    margin: 0 5em;
+    margin: 0 8em;
 }
 
 @mixin buttonBottom {

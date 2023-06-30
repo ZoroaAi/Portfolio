@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import StarCanvas from './components/StarCanvas';
+import StarCanvas from './components/canvas/StarCanvas';
 
 function App() {
   return (

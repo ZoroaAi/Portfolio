@@ -1,19 +1,66 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import '../styles/contact.scss';
 import { SectionWrapper } from '../hoc';
+import Loader from './Loaders/CanvasLoader';
+import { slideIn } from '../utils/motion';
+
+const Earth = () => {
+    const earth = useGLTF('./models/planet/scene.gltf');
+
+    return(
+        <primitive 
+            object={earth.scene}
+            scale={2.5}
+            position-y={0}
+        />
+    )
+}
+
+const EarthCanvas = () => {
+    return (
+        <Canvas
+            shadows
+            frameloop="demand"
+            gl={{ preserveDrawingBuffer: true}}
+            camera={{
+                fov: 45,
+                near: 0.1,
+                far: 200,
+                position: [-4, 3, 6]
+            }}
+        >
+            <Suspense fallback={<Loader/>}>
+                <OrbitControls 
+                    autoRotate
+                    enableZoom={false}
+                    maxPolarAngle={Math.PI / 2}
+                    minPolarAngle={Math.PI / 2}
+                />
+                <Earth />
+            </Suspense>
+
+        </Canvas>
+    )
+}
 
 function Contact() {
     const [fromName, setFromName] = useState("");
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
+    const [isSending, setIsSending] = useState(false);
 
     const form = useRef();
 
     function sendEmail(e) {
         e.preventDefault();
+
+        setIsSending(true);
 
         const service = process.env.REACT_APP_SERVICE_ID;
         const template = process.env.REACT_APP_TEMPLATE_ID;
@@ -25,29 +72,39 @@ function Contact() {
             publick)
         .then((result) => {
             console.log(result.text);
+            setIsSending(false);
         }, (error) => {
             console.log(error.text);
+            setIsSending(false);
         });
     }
 
     return (
         <div>
-            <div className="contact-wrapper">
-                <div className="contact-inside-wrapper">
-                    <h2>Contact Me.</h2>
-                    <form ref={form} onSubmit={sendEmail} className='email-form'>
-                        <div className="title-email">
-                            <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>
-                            <input type="email" placeholder="Email" value={email} name='email' onChange={e => setEmail(e.target.value)} required/>
+            
+                <div className="contact-wrapper">
+                    <motion.div variants={slideIn('left','tween',0.2,1)}>
+                        <div className="contact-inside-wrapper">
+                            <p>Get in touch</p>
+                            <h2>Contact.</h2>
+                            <form ref={form} onSubmit={sendEmail} className='email-form'>
+                                <div className="title-email">
+                                    <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>
+                                    <input type="email" placeholder="Email" value={email} name='email' onChange={e => setEmail(e.target.value)} required/>
+                                </div>
+                                <textarea placeholder="Message" value={message} name='message' onChange={e => setMessage(e.target.value)}  required></textarea>
+                                <button type="submit" disabled={isSending}>
+                                    {isSending ? 'Sending...' : 'Send' }
+                                </button>
+                            </form>
                         </div>
-                        <textarea placeholder="Message" value={message} name='message' onChange={e => setMessage(e.target.value)}  required></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
+                    </motion.div>
+                    <motion.div className='earth_wrapper' variants={slideIn('right','tween',0.2,1)}>
+                        <div className="earth">
+                           <EarthCanvas />
+                        </div>
+                    </motion.div>
                 </div>
-                <div className="contact-img">
-                    <div>Placeholder for Image</div>
-                </div>
-            </div>
         </div>
     );
 }

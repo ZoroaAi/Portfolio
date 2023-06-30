@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
 
-import Loader from './Loader';
+import Loader from './Loaders/CanvasLoader';
 
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';

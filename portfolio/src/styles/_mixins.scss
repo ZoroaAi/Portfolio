@@ -58,6 +58,16 @@ $breakpoints: (
     bottom: 32px;
 }
 
+@mixin responsiveHeight{
+    @media (min-height: map-get($breakpoints, md)) {
+        height: 550px;
+    }
+    @media (min-height: map-get($breakpoints, xl)) {
+        height: auto;
+    }
+    height: 350px;
+}
+
 @mixin sectionHeadText{
     color: h.$text-colour;
     font-size: 30px;

@@ -2,6 +2,7 @@ import { Suspense, useEffect, useRef, useState} from 'react'
 import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { DirectionalLightHelper, Object3D, SpotLightHelper } from 'three';
+import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
 
@@ -9,6 +10,7 @@ import Loader from './Loader';
 
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
+import { fadeIn, textVariant } from '../utils/motion';
 
 const Room = (isMobile) => {
     const room = useGLTF('/models/room/room_model.glb');
@@ -20,10 +22,10 @@ const Room = (isMobile) => {
     const { scene } = useThree();
 
     useEffect(() => {
-        if (dirLightRef.current) { 
-            const dirHelper = new DirectionalLightHelper(dirLightRef.current);
-            scene.add(dirHelper);
-        }
+        // if (dirLightRef.current) { 
+        //     const dirHelper = new DirectionalLightHelper(dirLightRef.current);
+        //     scene.add(dirHelper);
+        // }
 
         if (spotLightRef.current) { 
             // const spotHelper = new SpotLightHelper(spotLightRef.current);
@@ -123,15 +125,17 @@ const RoomModel = () => {
 function AboutMe(){
     return(
         <div className="aboutMe">
-            <div className="about-info">
-                <h2>About Me</h2>
+            <motion.div className="about-info" variants={textVariant()}>
+                <h2>About Me.</h2>
                 <p>Hello, I'm Saurav KC, soon to be graduating with a degree in Computer Science from the University of Portsmouth. My journey in this diverse field has led me to discover a increasing appreciation for the art and science of web design and development.
                 <br/><br/>This passion isn't just theoretical, it has driven me to explore a wide variety of tech stacks and apply them in practical settings, making each project a unique blend of creativity and functionality.
                 Feel free to explore more about me and my work. I'm excited about the opportunities ahead and I welcome any conversations about how my passion and skills could meet your needs.
                 </p>
-            </div>
+            </motion.div>
             <div className="about-img">
-                <RoomModel/>
+                <motion.div variants={fadeIn('up', 'spring',0.8,0.75)}>
+                    <RoomModel/>
+                </motion.div>
             </div>
         </div>
     )

@@ -1,17 +1,14 @@
 @use 'mixins' as m;
 
 .contact-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(555px,1fr));
-    place-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     height: 100vh;
 
-    @include m.textStyle();
-
     h2{
-        font-size: 1.5em;
-        color: aliceblue;
+        @include m.sectionHeadText();
     }
 
     .email-form{
@@ -25,6 +22,8 @@
 
         .title-email{
             display: flex;
+            justify-content: space-between;
+            width: 100%;
             gap: 2px;
             input{
                 flex: 1;
@@ -40,6 +39,13 @@
         button{
             width: 60px;
         }
+    }
+
+    .contact-img{
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
     }
 }
 

@@ -34,7 +34,7 @@ function Contact() {
         <div>
             <div className="contact-wrapper">
                 <div className="contact-inside-wrapper">
-                    <h2>Contact Me</h2>
+                    <h2>Contact Me.</h2>
                     <form ref={form} onSubmit={sendEmail} className='email-form'>
                         <div className="title-email">
                             <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>

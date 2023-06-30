@@ -79,3 +79,14 @@ $breakpoints: (
         font-size: 0.8em;
     }
 }
+
+@mixin subText{
+    font-size: 2em;
+    font-weight: 600;
+    color: h.$text-colour-secondary;
+    letter-spacing: 0.05em;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        font-size: 0.8em;
+    }
+}

@@ -13,9 +13,14 @@ body{
 .hero{
   height: 100vh;
   position: relative;
+  
+  .intro-text{
+    @include m.sectionHeadText();
+  }
 }
 
 
 .section__wrapper:not(:last-child){
   @include m.sectionPadding();
+  margin: 0 3em;
 }

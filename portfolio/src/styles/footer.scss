@@ -1,11 +1,12 @@
+@use 'helpers' as h;
 @use 'mixins' as m;
 
-.footer{
+footer{
     margin: 0 2em;
-    border-top: 2px solid white;
+    border-top: 2px solid h.$text-colour;
 
     display: flex;
     align-items: center;
 
-    @include m.textStyle();
+    @include m.sectionSubText();
 }

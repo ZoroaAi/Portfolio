@@ -36,4 +36,12 @@
         margin: 0;
         @include m.sectionHeadText();
     }
+    .exp_company_name{
+        margin: 0;
+    }
+    .exp_desc{
+        font-size: 14px;
+        padding-left: 1px;
+        letter-spacing: 0.05em;
+    }
 }

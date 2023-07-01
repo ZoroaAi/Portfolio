@@ -28,7 +28,11 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 20px;
+    
+    .project_cards > * {
+        margin-right: 10px;
+    }
 
     @include m.textStyle();
 

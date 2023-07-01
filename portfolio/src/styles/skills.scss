@@ -1,15 +1,8 @@
 @use 'mixins' as m;
 
-.skills-container{
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .skills {
   width: 80%;
-  height: 100vh;
+  height: 20vh;
   padding: 1em;
   h2{
     @include m.sectionHeadText();

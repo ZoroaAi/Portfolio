@@ -16,6 +16,8 @@ import EFS from "./projects/EFS.jpg";
 import Meliora from "./projects/MelioraMarket.png";
 import VotingSystem from "./projects/VotingSystem.png";
 
+import construction from './construction.svg';
+
 export {
   logo,
   github,
@@ -32,4 +34,5 @@ export {
   EFS,
   Meliora,
   VotingSystem,
+  construction
 };

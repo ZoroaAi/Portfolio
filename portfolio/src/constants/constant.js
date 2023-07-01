@@ -10,6 +10,7 @@ import {
     Meliora,
     VotingSystem,
     threejs,
+    construction,
 } from "../assets";
 
 export const navLinks = [
@@ -197,6 +198,19 @@ const projects = [
         ],
         image: VotingSystem,
         link: "https://github.com/ZoroaAi/VotingSystem",
+    },
+    {
+        name: "Many More To Come! :)",
+        description:
+        "My interest in web development and software development is ever growing and I will include more projects here in the future.",
+        tags: [
+        {
+            name: "coming-soon",
+            color: "text-blue",
+        }
+        ],
+        image: construction,
+        link: "",
     },
 ];
 

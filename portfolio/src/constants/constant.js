@@ -11,6 +11,7 @@ import {
     VotingSystem,
     threejs,
     construction,
+    uop,
 } from "../assets";
 
 export const navLinks = [
@@ -108,29 +109,28 @@ const technologies = [
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: '',
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "Web Editorial Assistant",
+        company_name: "University of Portsmouth",
+        icon: uop,
+        iconBg: "#FDF8F3",
+        date: "October 2022 - November 2022",
         points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Built new webpages using a CMS platform.",
+        "Worked in a team environment following the SCRUM development life cycle.",
+        "Effectively communicated daily progress and encountered issues in team meetings.",
+        "Demonstrated strong attention to detail in creating new web pages to maintain the website's aesthetic style.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: '',
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        title: "Undergraduate",
+        company_name: "University of Portsmouth",
+        icon: uop,
+        iconBg: "#FDF8F3",
+        date: "September 2020 - July 2023",
         points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Explored web programming, data structures and algorithms, and software engineering best practices",
+        "Gained experience in working with teams by leading the front-end side of a project.",
+        "Developed programming skills in Python, Java, Javascript, and Object-Oriented Programming",
         ],
     },
 ];

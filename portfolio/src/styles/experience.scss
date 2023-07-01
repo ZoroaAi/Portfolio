@@ -1,0 +1,39 @@
+@use 'mixins' as m;
+@use 'helpers' as h;
+
+.exp_title{
+    p{
+        margin: 0;
+        @include m.sectionSubText();
+    }
+    h2{
+        margin: 0;
+        @include m.sectionHeadText();
+    }
+}
+
+.exp{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    .timeline_elem{
+        background: h.$subtle-green;
+    }
+    .icon_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .exp_icon{
+            width: 100%;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+    }
+    .exp_title{
+        margin: 0;
+        @include m.sectionHeadText();
+    }
+}

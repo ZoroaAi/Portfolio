@@ -17,6 +17,7 @@ import Meliora from "./projects/MelioraMarket.png";
 import VotingSystem from "./projects/VotingSystem.png";
 
 import construction from './construction.svg';
+import uop from './uop_logo.jpg';
 
 export {
   logo,
@@ -34,5 +35,6 @@ export {
   EFS,
   Meliora,
   VotingSystem,
-  construction
+  construction,
+  uop,
 };

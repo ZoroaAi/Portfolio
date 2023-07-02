@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import './App.scss';
 
 import PageLoader from './components/Loaders/PageLoader';
@@ -13,28 +15,42 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StarCanvas from './components/canvas/StarCanvas';
 
+const  MainContent = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <div className='hero'>
+          <Navbar/>
+          <Landing/>
+        </div>
+        <AboutMe />
+        <Experience />
+        <Projects />
+        <Skills />
+        <div className="contact-section">
+          <Contact />
+          <StarCanvas />
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
 
 function App() {
-  const [isLoading, setisLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
   return (
-    <PageLoader />
-    // <BrowserRouter>
-    //   <div>
-    //     <div className='hero'>
-    //       <Navbar/>
-    //       <Landing/>
-    //     </div>
-    //     <AboutMe />
-    //     <Experience />
-    //     <Projects />
-    //     <Skills />
-    //     <div class="contact-section">
-    //       <Contact />
-    //       <StarCanvas />
-    //     </div>
-    //     <Footer />
-    //   </div>
-    // </BrowserRouter>
+    <>
+      <AnimatePresence>
+        {isLoading && <PageLoader loading={isLoading} />}
+      </AnimatePresence>
+      {!isLoading && <MainContent />}
+    </>
   );
 }
 

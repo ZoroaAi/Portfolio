@@ -51,7 +51,13 @@ const PageLoader = ({loading}) => {
     }, [loading]);
 
     return (
-        <div className="loader_wrapper">
+        <motion.div 
+            className="loader_wrapper"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: loading ? 1 : 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <motion.div className="computer">
                 <motion.div
                     initial= {{ opacity: 0, scale:0.8 }}
@@ -169,7 +175,7 @@ const PageLoader = ({loading}) => {
                     />
                 </div>
             </motion.div>
-        </div>
+        </motion.div>
     );
 }
 

@@ -33,25 +33,6 @@ export const navLinks = [
     },
 ];
 
-const services = [
-    {
-        title: "Web Developer",
-        icon: '',
-    },
-    {
-        title: "React Native Developer",
-        icon: '',
-    },
-    {
-        title: "Backend Developer",
-        icon: '',
-    },
-    {
-        title: "Content Creator",
-        icon: '',
-    },
-];
-
 const technologies = [
     {
         name: "HTML 5",
@@ -66,28 +47,12 @@ const technologies = [
         icon: javascript,
     },
     {
-        name: "TypeScript",
-        icon: '',
-    },
-    {
         name: "React JS",
         icon: reactjs,
     },
     {
-        name: "Redux Toolkit",
-        icon: '',
-    },
-    {
-        name: "Tailwind CSS",
-        icon: '',
-    },
-    {
         name: "Node JS",
         icon: nodejs,
-    },
-    {
-        name: "MongoDB",
-        icon: '',
     },
     {
         name: "Three JS",
@@ -100,10 +65,6 @@ const technologies = [
     {
         name: "figma",
         icon: figma,
-    },
-    {
-        name: "docker",
-        icon: '',
     },
 ];
 
@@ -214,4 +175,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, projects };
+export { technologies, experiences, projects };

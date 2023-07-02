@@ -1,10 +1,7 @@
-import {useState} from 'react';
 import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
 
 import { github } from '../assets';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-solid-svg-icons';
 
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants/constant';

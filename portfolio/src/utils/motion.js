@@ -16,6 +16,15 @@ export const textVariant = (delay) => {
     };
 };
 
+export const dotVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+};
+  
+export const cloudVariants = (speed) => ({
+animate: { x: "-100%", transition: { repeat: Infinity, duration: speed } }
+});
+
 export const fadeIn = (direction, type, delay, duration) => {
     return {
     hidden: {

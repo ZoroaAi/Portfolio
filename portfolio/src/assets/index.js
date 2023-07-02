@@ -18,6 +18,9 @@ import VotingSystem from "./projects/VotingSystem.png";
 
 import construction from './construction.svg';
 import uop from './uop_logo.jpg';
+import airplane from './airplane.svg';
+import clouds from './parallax/clouds.svg';
+
 
 export {
   logo,
@@ -37,4 +40,6 @@ export {
   VotingSystem,
   construction,
   uop,
+  airplane,
+  clouds,
 };

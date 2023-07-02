@@ -27,7 +27,7 @@ const  MainContent = () => {
         <Experience />
         <Projects />
         <Skills />
-        <div className="contact-section">
+        <div className="contact">
           <Contact />
           <StarCanvas />
         </div>

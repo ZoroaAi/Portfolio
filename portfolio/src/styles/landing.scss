@@ -1,6 +1,52 @@
 @use './_mixins.scss' as m;
 @use './_helpers.scss' as h;
 
+@import url('https://fonts.cdnfonts.com/css/source-code-pro');
+
+.hero_main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  .hero_text{
+  
+    .intro{
+      margin: 0;
+      font-family: 'Source Code Pro', sans-serif;
+      @include m.HeroText();
+    }
+    p{
+      margin: 0;
+      @include m.HeroSubText();
+    }
+  }
+  button{
+    display: inline-block;
+    background-color: h.$subtle-green;
+    color: h.$text-colour;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover{
+      background-color: darken($color: h.$subtle-green, $amount: 20%);
+    }
+
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
 .scroll_button{
     display: flex;
     justify-content: center;

@@ -13,10 +13,6 @@ body{
 .hero{
   height: 100vh;
   position: relative;
-  
-  .intro-text{
-    @include m.sectionHeadText();
-  }
 }
 
 

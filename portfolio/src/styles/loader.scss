@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
 
-    z-index: 9;
+    z-index: 100;
 
     .computer{
         display: flex;
@@ -41,8 +41,18 @@
 
                 box-shadow:  inset 2px 3px 0px 0px #0000007a;
 
+                .pointer{
+                    position: absolute;
+                    top: 83px;
+                    left: 75px;
+                }
                 span{
                     position: absolute;
+                    transform: translate(40%, 100%);
+                    margin-top: 35px;
+                    color: h.$text-colour;
+                    font-size: large;
+                    font-weight: 600;
                 }
                 .cloud{
                     position: absolute;
@@ -162,6 +172,7 @@
             .mouse_scroll{
                 width: 4px;
                 height: 5px;
+                margin-top: 5px;
                 border-radius: 35%;
                 box-shadow: 0.5px 0.5px 0px;
                 background-color: h.$bg-colour;
@@ -172,6 +183,13 @@
             flex-direction: row;
             align-items: center;
             gap: 5px;
+        }
+        .bar_wrapper{
+            width: 13em;
+            height: 0.8em;
+            margin-top: 15px;
+            border-radius: 5em;
+            background-color: h.$subtle-green;
         }
     }
 }

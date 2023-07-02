@@ -5,6 +5,20 @@ html{
     scroll-behavior: smooth;
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        width: 40px; 
+        height: auto;
+    }
+    .navbar-left{
+        margin-left: 1.5em;
+    }
+}
+
 .navbar {
     z-index: 1000;
     position: sticky;
@@ -14,7 +28,7 @@ html{
     overflow: auto;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
     ul {
@@ -28,7 +42,7 @@ html{
         text-align: center;
     }
     a {
-        @include m.subText();
+        @include m.NavBarText();
         text-decoration: none;
 
         &:hover{
@@ -36,16 +50,7 @@ html{
         }
     }
 
-    .logo {
-        width: 40px; 
-        height: auto;
-    }
-
-    .navbar-top{
-        margin-left: 1.5em;
-    }
-
-    .navbar-middle{
+    .navbar-right{
         ul {
             display: flex;
             justify-content: center;
@@ -56,34 +61,79 @@ html{
             }
         }
     }
+    .download_button{
+        background-color: h.$subtle-green;
+        color: h.$text-colour;
+        padding: 5px 12px;
+        border: none;
+        border-radius: 7px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    
+        @include m.NavBarText();
 
-    .navbar-bottom{
-        margin-right: 1.5em;
-        button {
-            display: block;
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            color: h.$text-colour;
-            background-color: rgb(31, 30, 33);
+        span{
+            margin: 0 2px;
         }
+
+        &:hover{
+          background-color: darken($color: h.$subtle-green, $amount: 20%);
+        }
+    
+        a{
+          text-decoration: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 }
   
 .mobile-menu {
     display: none;
 
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 10px;
+            text-align: center;
+            a {
+                @include m.NavBarText();
+                text-decoration: none;
+        
+                &:hover{
+                    color: h.$subtle-green;
+                }
+            }
+        }
+    }
+
+    .fa_icon{
+        width: 15px;
+        height: 15px;
+        color: h.$subtle-green;
+        &:hover{
+            color: darken($color: h.$subtle-green, $amount: 20%);
+        }
+    }
+
     @media (max-width: 768px) {
         display: block;
-
         ul {
-        display: none;
+            display: none;
         }
     }
 
     &.open {
         ul {
-        display: block;
+            display: block;
         }
     }
 }

@@ -1,7 +1,5 @@
 import logo from "./Logo.png";
 import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
 
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
@@ -21,12 +19,12 @@ import uop from './uop_logo.jpg';
 import airplane from './airplane.svg';
 import clouds from './parallax/clouds.svg';
 
+import cv from './CV.docx';
+
 
 export {
   logo,
   github,
-  menu,
-  close,
   css,
   figma,
   git,
@@ -42,4 +40,5 @@ export {
   uop,
   airplane,
   clouds,
+  cv,
 };

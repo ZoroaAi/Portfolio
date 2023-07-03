@@ -22,8 +22,8 @@ const Path = props => (
 );
   
 const MenuToggle = ({ toggle }) => (
-    <button onClick={toggle}>
-      <svg width="15" height="15" viewBox="0 0 15 15">
+    <button onClick={toggle} className='menu_toggle_button'>
+      <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
@@ -51,9 +51,8 @@ const MenuToggle = ({ toggle }) => (
 
 function Navbar(){
     const [active, setActive] = useCycle(false, true);
-    const [isOpen, toggleOpen] = useState();
+    const [isOpen, toggleOpen] = useCycle(false, true);
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleResize = () => setIsMobileView(window.innerWidth <= 768);
@@ -62,21 +61,6 @@ function Navbar(){
         return () => {
             window.removeEventListener('resize', handleResize);
         }
-    }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        if (scrollTop > 100) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return(
@@ -119,12 +103,10 @@ function Navbar(){
                 </div>
             </div>
 
-            <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
-                <motion.div className={`mobile-menu ${isOpen ? 'open' : ''}`} variants={sideBarVariant}>
-                    <div>
-                        {/* <button onClick={() => toggleOpen(!isOpen)}>
-                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className="fa_icon" />
-                        </button> */}
+            <motion.div initial={false} animate={isOpen ? "open" : "closed"} className='mobile_nav'>
+                <motion.div className={`mobile_menu ${isOpen ? 'open' : ''}`} variants={sideBarVariant}>
+                    <div className='mobile_wrapper'>
+                        <MenuToggle toggle={() => toggleOpen()} />
                         <motion.ul variants={mobileNavVariant}>
                             {navLinks.map((link) => (
                             <motion.li key={link.id} variants={mobileItemVariant} 
@@ -146,10 +128,9 @@ function Navbar(){
                             ))}
                             <li></li>
                         </motion.ul>
-                        <MenuToggle toggle={() => toggleOpen()} />
                     </div>
                 </motion.div>
-            </motion.nav>
+            </motion.div>
         </nav>
     )
 }

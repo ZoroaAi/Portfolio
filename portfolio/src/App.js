@@ -19,10 +19,8 @@ const  MainContent = () => {
   return (
     <BrowserRouter>
       <div>
-        <div className='hero'>
-          <Navbar/>
-          <Landing/>
-        </div>
+        <Navbar/>
+        <Landing/>
         <AboutMe />
         <Experience />
         <Projects />

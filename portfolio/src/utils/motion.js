@@ -44,7 +44,6 @@ export const mobileItemVariant = {
 
 export const sideBarVariant = {
     open: (height = 100) => ({
-      clipPath: `circle(${height * 2 + 200}px at calc(100% - 40px) 40px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -52,7 +51,6 @@ export const sideBarVariant = {
       }
     }),
     closed: {
-      clipPath: "circle(30px at calc(100% - 20px) 20px)",
       transition: {
         delay: 0.5,
         type: "spring",

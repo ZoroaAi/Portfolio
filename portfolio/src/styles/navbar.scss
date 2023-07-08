@@ -80,6 +80,7 @@ ul {
 }
 
 .menu_toggle_button{
+    z-index: 2000;
     outline: none;
     border: none;
     cursor: pointer;
@@ -90,7 +91,7 @@ ul {
 }
 
 .navbar-collapse {
-    position: absolute;
+    z-index: 2000;
     width: 100%;
     height: 100%;
     display: flex;

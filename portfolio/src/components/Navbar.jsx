@@ -110,12 +110,11 @@ const navVariants = {
 
 const MobileMenu = ({isOpen, toggle, setActive}) => {
     return (
-        <div style={{position: 'relative'}}>
-            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
+        <div className='mobile_wrapper'>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="navbar-collapse"
+                        className="mobile_nav"
                         variants={navVariants}
                         initial="closed"
                         animate="open"
@@ -149,6 +148,7 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                     </motion.div>
                 )}
             </AnimatePresence>
+            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
         </div>
     )
 }
@@ -161,11 +161,6 @@ function Navbar(){
     const handleResize = () => {
         setIsMobile(window.innerWidth <= 768);
     };
-
-    const toggleOpen = () => {
-        console.log('Triggered Open/Close Menu');
-        setIsOpen(!isOpen);
-    }
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
@@ -184,7 +179,6 @@ function Navbar(){
                     <img src={logo} alt="logo" className="logo"/>
                 </RouterLink>
             </div>
-            <div className="navbar_right">
             {isMobile ? (
                 <div className="navbar_right">
                     <MobileMenu isOpen={isOpen} toggle={() => {setIsOpen(!isOpen)}} setActive={setActive} />
@@ -220,8 +214,6 @@ function Navbar(){
                     </div>
                 </div>
             )}
-
-            </div>
         </nav>
     )
 }

@@ -111,39 +111,36 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
         <>
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        className="mobile_nav"
+                    <motion.ul className={`mobile_nav mobile_nav_list ${isOpen ? 'open' : ''}`}
                         variants={navVariants}
                         initial="closed"
                         animate="open"
                         exit="closed"
                     >
-                        <ul className={`mobile_nav_list ${isOpen ? 'open' : ''}`}>
-                            {navLinks.map((link) => (
-                                <li key={link.id} className='mobile_nav_list_item'>
-                                    <ScrollLink
-                                        activeClass="active"
-                                        to={link.id}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-20}
-                                        duration={500}
-                                        onClick={() => {setActive(link.title)}}
-                                    >
-                                        {link.title}
-                                    </ScrollLink>
-                                </li>
-                            ))}
-                            <li>
-                                <a href='_blank' download={cv}>
-                                    <button className='download_button'>
-                                        <FontAwesomeIcon icon={faFileArrowDown} />
-                                        <span>Download My CV</span>
-                                    </button>
-                                </a>
+                        {navLinks.map((link) => (
+                            <li key={link.id} className='mobile_nav_list_item'>
+                                <ScrollLink
+                                    activeClass="active"
+                                    to={link.id}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-20}
+                                    duration={500}
+                                    onClick={() => {setActive(link.title)}}
+                                >
+                                    {link.title}
+                                </ScrollLink>
                             </li>
-                        </ul>
-                    </motion.div>
+                        ))}
+                        <li>
+                            <a href='_blank' download={cv}>
+                                <button className='download_button'>
+                                    <FontAwesomeIcon icon={faFileArrowDown} />
+                                    <span>Download My CV</span>
+                                </button>
+                            </a>
+                        </li>
+                    </motion.ul>
                 )}
             </AnimatePresence>
         </>

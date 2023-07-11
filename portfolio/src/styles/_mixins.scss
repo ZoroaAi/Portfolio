@@ -143,3 +143,16 @@ $breakpoints: (
         font-size: 0.9em;
     }
 }
+@mixin responsiveNavBarText{
+    color: h.$text-colour;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        font-size: 1.5em;
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        font-size: 0.9em;
+    }
+}

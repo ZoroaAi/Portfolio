@@ -32,6 +32,13 @@ nav{
         justify-content: end;
         align-items: center;
         grid-column: middle;
+
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            grid-column: middle / span 2;
+        }
     }
 
     .burger_wrapper{
@@ -103,6 +110,9 @@ ul {
 
 
 @media (max-width: 768px) {
+    nav{
+        margin-top: 0.8em;
+    }
     .mobile_nav {
         height: 100vh;
         width: 100%;
@@ -119,6 +129,9 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 10px 0;
+
+        @include m.responsiveNavBarText();
 
         cursor: pointer;
     }
@@ -126,7 +139,11 @@ ul {
         grid-area: middle;
     }
     .burger{
+        margin-right: 2em;
         grid-area: right;
+    }
+    .download_button{
+        padding: 15px 12px;
     }
 }
  

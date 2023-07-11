@@ -90,121 +90,72 @@ ul {
     background: transparent;
 }
 
-.mobile_wrapper{
-    position: relative;
-    width: 100%;
-}
-
-.mobile_nav{
-    z-index: 2000;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: height 0.5s ease;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-    
-        li {
-            padding: 10px;
-            text-align: center;
-    
-            a {
-                @include m.NavBarText();
-                text-decoration: none;
-            
-                &:hover{
-                    color: h.$subtle-green;
-                }
-            }
-        }
-    }
-}
-
-.burger{
-    cursor: pointer;
-}
 
 @media (max-width: 768px) {
     .navbar_right {
         display: none;
     }
-
-    .navbar-collapse {
+    
+    .mobile_nav {
         height: 0;
         overflow: hidden;
     }
 }
 
- 
-.mobile_nav{
-    width: 100%;
+.mobile_wrapper {
+    position: relative; 
+    z-index: 1001;
 }
-.mobile_menu {
-    display: none;
-    position: absolute;
+
+.mobile_nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    justify-content: center;
+    background: h.$bg-colour;
+    padding: 1em;
+    text-align: center; 
+    box-sizing: border-box; 
+    z-index: 1000;
+}
+
+.mobile_nav_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    ul {
-        padding: 25px;
+    .mobile_nav_list_item {
         width: 100%;
-
-        li {
-            list-style: none;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-    }
-      
-    .mobile_wrapper{
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .menu_toggle_button{
-        outline: none;
-        border: none;
         cursor: pointer;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: transparent;
-    }
-
-    .fa_icon{
-        width: 15px;
-        height: 15px;
-        color: h.$subtle-green;
-        &:hover{
-            color: darken($color: h.$subtle-green, $amount: 20%);
-        }
-    }
-
-    @media (max-width: 768px) {
-        visibility: visible;
-        display: block;
-        position: relative;
-        ul {
-            display: none;
-        }
-    }
-
-    &.open {
-        ul {
-            display: block;
-        }
+        margin-bottom: 1em;
     }
 }
+
+
+@media (max-width: 768px) {
+    .navbar_right {
+        display: none;
+    }
+    
+    .mobile_nav {
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+}
+
+.burger{
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+ 

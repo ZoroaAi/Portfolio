@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
-import { motion, useCycle, AnimatePresence, Transition, SVGMotionProps } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faBars, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -9,8 +9,6 @@ import { faTimes, faBars, faFileArrowDown } from '@fortawesome/free-solid-svg-ic
 import '../styles/navbar.scss';
 import { navLinks } from '../constants/constant';
 import { logo, cv } from '../assets';
-import { mobileItemVariant, mobileNavVariant, sideBarVariant } from '../utils/motion';
-
 
 const MenuButton = ({
     isOpen = false,
@@ -104,13 +102,14 @@ const MenuButton = ({
 };
 
 const navVariants = {
-    open: { opacity: 1, height: "auto" },
+    open: { opacity: 1, height: "20vh" },
     closed: { opacity: 0, height: 0 }
 };
 
 const MobileMenu = ({isOpen, toggle, setActive}) => {
     return (
         <div className='mobile_wrapper'>
+            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -120,9 +119,9 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                         animate="open"
                         exit="closed"
                     >
-                        <ul>
+                        <ul className='mobile_nav_list'>
                             {navLinks.map((link) => (
-                                <li key={link.id}>
+                                <li key={link.id} className='mobile_nav_list_item'>
                                     <ScrollLink
                                         activeClass="active"
                                         to={link.id}
@@ -148,7 +147,7 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
+            {/* <MenuButton isOpen={isOpen} onClick={() => {toggle()}} /> */}
         </div>
     )
 }

@@ -109,7 +109,6 @@ const navVariants = {
 const MobileMenu = ({isOpen, toggle, setActive}) => {
     return (
         <div className='mobile_wrapper'>
-            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -147,7 +146,7 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            {/* <MenuButton isOpen={isOpen} onClick={() => {toggle()}} /> */}
+            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
         </div>
     )
 }

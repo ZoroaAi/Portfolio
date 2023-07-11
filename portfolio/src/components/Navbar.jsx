@@ -102,13 +102,13 @@ const MenuButton = ({
 };
 
 const navVariants = {
-    open: { opacity: 1, height: "20vh" },
+    open: { opacity: 1, height: "100vh" },
     closed: { opacity: 0, height: 0 }
 };
 
 const MobileMenu = ({isOpen, toggle, setActive}) => {
     return (
-        <div className='mobile_wrapper'>
+        <>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -118,7 +118,7 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                         animate="open"
                         exit="closed"
                     >
-                        <ul className='mobile_nav_list'>
+                        <ul className={`mobile_nav_list ${isOpen ? 'open' : ''}`}>
                             {navLinks.map((link) => (
                                 <li key={link.id} className='mobile_nav_list_item'>
                                     <ScrollLink
@@ -146,8 +146,7 @@ const MobileMenu = ({isOpen, toggle, setActive}) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            <MenuButton isOpen={isOpen} onClick={() => {toggle()}} />
-        </div>
+        </>
     )
 }
 
@@ -160,6 +159,10 @@ function Navbar(){
         setIsMobile(window.innerWidth <= 768);
     };
 
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+    }
+
     useEffect(() => {
         window.addEventListener("resize", handleResize);
         return () => {
@@ -169,7 +172,7 @@ function Navbar(){
 
     return(
         <nav>
-            <div className="navbar-left">
+            <div className="navbar_left">
                 <RouterLink to='/' onClick={() => {
                     setActive("");
                     window.scrollTo(0,0);
@@ -177,39 +180,40 @@ function Navbar(){
                     <img src={logo} alt="logo" className="logo"/>
                 </RouterLink>
             </div>
-            {isMobile ? (
-                <div className="navbar_right">
+            <div className="navbar_right">
+                {isMobile ? (
                     <MobileMenu isOpen={isOpen} toggle={() => {setIsOpen(!isOpen)}} setActive={setActive} />
-                </div>
-            ) : (
-                <div className="navbar_right">
-                    <div>
-                        <ul>
-                            {navLinks.map((link) => (
-                                <li key={link.id}> 
-                                    <ScrollLink
-                                        activeClass="active"
-                                        to={link.id}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-20}
-                                        duration={500}
-                                        onClick={() => setActive(link.title)}
-                                    >
-                                        {link.title}
-                                    </ScrollLink>
-                                </li>
-                            ))}
-                            <li>
-                                <a href='_blank' download={cv}>
-                                    <button className='download_button'>
-                                        <FontAwesomeIcon icon={faFileArrowDown} />
-                                        <span>Download My CV</span>
-                                    </button>
-                                </a>
+                ) : (
+                    <ul>
+                        {navLinks.map((link) => (
+                            <li key={link.id}> 
+                                <ScrollLink
+                                    activeClass="active"
+                                    to={link.id}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-20}
+                                    duration={500}
+                                    onClick={() => setActive(link.title)}
+                                >
+                                    {link.title}
+                                </ScrollLink>
                             </li>
-                        </ul>
-                    </div>
+                        ))}
+                        <li>
+                            <a href='_blank' download={cv}>
+                                <button className='download_button'>
+                                    <FontAwesomeIcon icon={faFileArrowDown} />
+                                    <span>Download My CV</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                )}
+            </div>
+            {isMobile && (
+                <div className='burger_wrapper' onClick={() => {handleToggle()}}>
+                    <MenuButton isOpen={isOpen} />
                 </div>
             )}
         </nav>

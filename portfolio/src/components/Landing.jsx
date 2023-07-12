@@ -17,7 +17,7 @@ function Landing(){
           <p>Computer Science Graduate | Web Developer</p>
           <button><a href="#contact">Get in Touch</a></button>
         </div>
-        <img src={person} alt="Person" style={{ maxWidth: '50%' }} className="bobbing" />
+        <img src={person} alt="Person" style={{ maxWidth: '50%' }} className="hero_img bobbing" />
       </div>
 
       <div className="scroll_button">

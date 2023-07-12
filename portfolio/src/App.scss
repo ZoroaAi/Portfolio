@@ -10,12 +10,6 @@ body{
   margin: 0;
 }
 
-.hero{
-  height: 100vh;
-  position: relative;
-}
-
-
 .section__wrapper:not(:last-child){
   @include m.sectionPadding();
   margin: 0 10em;

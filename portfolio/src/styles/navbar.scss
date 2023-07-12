@@ -148,3 +148,36 @@ ul {
     }
 }
  
+.switch{
+    width: 40px;
+    height: 15px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 33px;
+    padding: 10px;
+
+    background-color: #c8c8c824;
+
+    cursor: pointer;
+
+    .handle {
+        width: 18px;
+        height: 18px;
+        background-color: white;
+        border-radius: 40px;
+    }
+
+    @media (max-width: map-get(m.$breakpoints, md)) {
+        width: 80px;
+        height: 25px;
+        .handle{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+.switch[data-isOn="true"] {
+    justify-content: flex-end;
+}

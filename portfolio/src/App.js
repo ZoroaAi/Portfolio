@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -14,11 +14,14 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StarCanvas from './components/canvas/StarCanvas';
+import { DarkModeContext, DarkModeProvider } from './components/dark_mode/DarkMode';
 
 const  MainContent = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <BrowserRouter>
-      <div>
+      <div className={darkMode ? 'dark' : ''}>
         <Navbar/>
         <Landing/>
         <AboutMe />
@@ -43,12 +46,12 @@ function App() {
     }, 3000);
   }, []);
   return (
-    <>
+    <DarkModeProvider>
       <AnimatePresence>
         {isLoading && <PageLoader loading={isLoading} />}
       </AnimatePresence>
       {!isLoading && <MainContent />}
-    </>
+    </DarkModeProvider>
   );
 }
 

@@ -1,7 +1,7 @@
 @use 'helpers' as h;
 
 @mixin textStyle(){
-    color: h.$text-colour;
+    color: --text-colour;
 }
 
 $breakpoints: (
@@ -69,7 +69,7 @@ $breakpoints: (
 }
 
 @mixin sectionHeadText{
-    color: h.$text-colour;
+    color: --text-colour;
     font-size: 30px;
 
     @media (min-width: map-get($breakpoints, xs)) {
@@ -85,7 +85,7 @@ $breakpoints: (
 
 @mixin sectionSubText{
     font-size: 0.6em;
-    color: h.$text-colour-secondary;
+    color: --text-colour-secondary;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
@@ -97,7 +97,7 @@ $breakpoints: (
 @mixin subText{
     font-size: 2em;
     font-weight: 600;
-    color: h.$text-colour-secondary;
+    color: --text-colour-secondary;
     letter-spacing: 0.05em;
 
     @media (min-width: map-get($breakpoints, sm)) {
@@ -106,7 +106,7 @@ $breakpoints: (
 }
 
 @mixin HeroText{
-    color: h.$text-colour;
+    color: --text-colour;
     font-size: 28px;
 
     @media (min-width: map-get($breakpoints, xs)) {
@@ -120,7 +120,7 @@ $breakpoints: (
     }
 }
 @mixin HeroSubText{
-    color: h.$text-colour;
+    color: --text-colour;
     font-size: 20px;
 
     @media (min-width: map-get($breakpoints, xs)) {
@@ -134,7 +134,7 @@ $breakpoints: (
     }
 }
 @mixin NavBarText{
-    color: h.$text-colour;
+    color: --text-colour;
     font-size: 0.8em;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -144,7 +144,7 @@ $breakpoints: (
     }
 }
 @mixin responsiveNavBarText{
-    color: h.$text-colour;
+    color: --text-colour;
     font-size: 2em;
     font-weight: 600;
     letter-spacing: 0.05em;

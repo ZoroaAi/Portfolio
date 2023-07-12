@@ -35,7 +35,7 @@
   }
   button{
     display: inline-block;
-    background-color: h.$subtle-green;
+    background-color: h.$contrast-colour;
     color: h.$text-colour;
     padding: 12px 24px;
     margin-top: 20px;
@@ -47,7 +47,7 @@
     cursor: pointer;
 
     &:hover{
-      background-color: darken($color: h.$subtle-green, $amount: 20%);
+      background-color: darken($color: h.$contrast-colour, $amount: 20%);
     }
 
     a{

@@ -1,23 +1,30 @@
 
-// $bg-colour: #2d2d2d;
-$bg-colour: #FDF8F3;
+// Light Mode
+$bg-colour-light: #FDF8F3;    // Primary background color
+$text-colour-light: #7b7169;       // Main color for body text
+$text-colour-2-light: #8D766F;      // Accent color for headings
+$highlight-colour-light: #ECC68E;        // Highlight or accent color for interactive elements
+$contrast-colour-light: #D8E5D4;     // Main contrast colour
 
-$text-colour: #7b7169;
-$text-colour-secondary: #8D766F;
+// Dark mode
+$primary-color-dark: #FDF8F3;
+$text-colour-dark: #7b7169;
+$text-colour-2-dark: #3fed70;
+$highlight-color-dark: #D8E5D4;
+$contrast-color-dark: #ECC68E;
 
-$scroll-button: #877c73;
-
-// Creamy color scheme
-$creamy-white: #FDF8F3;    // Primary background color
-$soft-taupe: #D9C6B7;       // Main color for body text
-$muted-brown: #8D766F;      // Accent color for headings
-$pale-gold: #ECC68E;        // Highlight or accent color for interactive elements
-
-// Additional colors
-$light-pink: #F8D9DC;       
-$subtle-green: #D8E5D4;     
+// Additional colors      
 $pastel-blue: #C3D9E8;      
 $mellow-yellow: #F7E8B1; 
+
+// Default to Light Mode
+$bg-colour: $bg-colour-light;
+$text-colour: $text-colour-light;
+$text-colour-secondary: $text-colour-2-light;
+$highlight-colour: $highlight-colour-light;
+$contrast-colour: $contrast-colour-light;
+
+$scroll-button: #877c73;
 
 // For Computer Loader
 $computer-colour: #b09d95;   

@@ -67,14 +67,14 @@ ul {
             text-decoration: none;
         
             &:hover{
-                color: h.$subtle-green;
+                color: h.$contrast-colour;
             }
         }
     }
 }
 
 .download_button{
-    background-color: h.$subtle-green;
+    background-color: h.$contrast-colour;
     color: h.$text-colour;
     padding: 5px 12px;
     border: none;
@@ -90,7 +90,7 @@ ul {
     }
 
     &:hover{
-      background-color: darken($color: h.$subtle-green, $amount: 20%);
+      background-color: darken($color: h.$contrast-colour, $amount: 20%);
     }
 
     a{

@@ -49,13 +49,13 @@
         button{
             padding: 10px 20px;
             border: none;
-            background-color: --contrast-colour;
-            color: --text-colour;
+            background-color: h.$contrast-colour;
+            color: h.$text-colour;
             border-radius: 8px;
             transition: background-color 0.3s ease;
             
             &:hover{
-                background-color: --contrast-colour-darkened;
+                background-color: h.$contrast-colour-darkened;
                 cursor: pointer;
             }
         }

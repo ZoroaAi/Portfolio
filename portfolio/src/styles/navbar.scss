@@ -90,7 +90,7 @@ ul {
     }
 
     &:hover{
-      background-color: darken($color: h.$contrast-colour, $amount: 20%);
+      background-color: h.$contrast-colour-darkened;
     }
 
     a{
@@ -162,6 +162,10 @@ ul {
 
     cursor: pointer;
 
+    input{
+        display: none;
+    }
+
     .handle {
         width: 18px;
         height: 18px;
@@ -178,6 +182,6 @@ ul {
         }
     }
 }
-.switch[data-isOn="true"] {
+.switch[data-darkMode="true"] {
     justify-content: flex-end;
 }

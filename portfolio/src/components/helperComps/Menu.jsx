@@ -157,22 +157,17 @@ export const MobileMenu = ({isOpen, toggle, setActive}) => {
     )
 }
 
-export const ThemeButton = () => {
-    const [isOn, setIsOn] = useState(false);
+export const ThemeButton = (props) => {
     const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
     const toggleSwitch = () => {
         console.log("Theme Button Clicked.")
-        setIsOn(!isOn);
         setDarkMode(prevMode => !prevMode);
     }
     
-    useEffect(() => {
-        setIsOn(darkMode);
-      }, [darkMode]);
-
     return(
-        <div className={`swtich ${darkMode ? 'dark' : ''}`} data-isOn={isOn} onClick={toggleSwitch}>
+        <div className={`switch ${darkMode ? 'dark' : ''}`} data-darkMode={darkMode} onClick={toggleSwitch}>
+            <input type="checkbox" checked={darkMode} readonly/>
             <motion.div className="handle" layout transition={spring} />
         </div>
     );

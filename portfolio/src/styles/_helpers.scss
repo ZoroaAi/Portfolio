@@ -9,18 +9,19 @@ $scroll-button-light: #877c73;
 
 // Dark mode
 $bg-colour-dark: #383838;
-$text-colour-dark: #f1f1f1;
+$text-colour-dark: #ffffff;
 $text-colour-2-dark: #d1d1d1;
 $highlight-colour-dark: #D8E5D4;
 $contrast-colour-dark: #c3e6b8;
-$scroll-button-light: #bdb6b0;
+$scroll-button-dark: #d4cdc7;
 
 // Additional colours      
 $pastel-blue: #C3D9E8;      
 $mellow-yellow: #F7E8B1; 
 
 // Darkened colours for Sass functions
-$contrast-colour-light-darkened: darken($contrast-colour-light, 20%);
+$contrast-colour-light-darkened: darken(#D8E5D4, 20%);
+$contrast-colour-dark-darkened: darken(#c3e6b8, 20%);
 
 // Default to Light Mode
 $bg-colour: $bg-colour-light;
@@ -37,17 +38,19 @@ $ground-colour: #3fed70;
 $ground-colour-2: #b8f254;
 $computer-screen: #9cd7f5;
 
-:root{
-    --bg-colour-light: #{$bg-colour-light};
-    --text-colour-light: #{$text-colour-light};
-    --text-colour-2-light: #{$text-colour-2-light};
-    --highlight-colour-light: #{$highlight-colour-light};
-    --contrast-colour-light: #{$contrast-colour-light};
-    --contrast-colour-light-darkened: #{$contrast-colour-light-darkened};
+// :root{
+//     --bg-colour-light: #{$bg-colour-light};
+//     --text-colour-light: #{$text-colour-light};
+//     --text-colour-2-light: #{$text-colour-2-light};
+//     --highlight-colour-light: #{$highlight-colour-light};
+//     --contrast-colour-light: #{$contrast-colour-light};
+//     --contrast-colour-light-darkened: #{$contrast-colour-light-darkened};
+//     --scroll-button-light: #{$scroll-button-light};
   
-    --bg-colour-dark: #{$bg-colour-dark};
-    --text-colour-dark: #{$text-colour-dark};
-    --text-colour-2-dark: #{$text-colour-2-dark};
-    --highlight-colour-dark: #{$highlight-colour-dark};
-    --contrast-colour-dark: #{$contrast-colour-dark};
-}
+//     --bg-colour-dark: #{$bg-colour-dark};
+//     --text-colour-dark: #{$text-colour-dark};
+//     --text-colour-2-dark: #{$text-colour-2-dark};
+//     --highlight-colour-dark: #{$highlight-colour-dark};
+//     --contrast-colour-dark: #{$contrast-colour-dark};
+//     --scroll-button-dark: #{$scroll-button-dark}
+// }

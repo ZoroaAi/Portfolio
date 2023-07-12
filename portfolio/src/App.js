@@ -21,7 +21,7 @@ const  MainContent = () => {
 
   return (
     <BrowserRouter>
-      <div className={darkMode ? 'dark' : ''}>
+      <div className={darkMode ? 'dark-theme' : ''}>
         <Navbar/>
         <Landing/>
         <AboutMe />
@@ -40,17 +40,21 @@ const  MainContent = () => {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);
   }, []);
+
   return (
     <DarkModeProvider>
       <AnimatePresence>
         {isLoading && <PageLoader loading={isLoading} />}
       </AnimatePresence>
-      {!isLoading && <MainContent />}
+      {!isLoading && 
+          <MainContent />
+      }
     </DarkModeProvider>
   );
 }

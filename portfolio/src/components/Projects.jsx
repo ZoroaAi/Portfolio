@@ -86,7 +86,7 @@ function Projects() {
             <div className="project_cards">
                 {projects.map((project, index) => (
                     <ProjectCard 
-                        key={'project-${index}'}
+                        key={`project-${index}`}
                         index={index}
                         {...project}
                     />

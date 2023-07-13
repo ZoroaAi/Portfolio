@@ -9,7 +9,7 @@ body{
 .section__wrapper:not(:last-child){
   margin: 0 4em;
   @include m.sectionPadding();
-  @media (min-width: map-get(m.$breakpoints,xs)) {
+  @media (max-width: map-get(m.$breakpoints,xs)) {
     margin: 0 1em;
   }
 }

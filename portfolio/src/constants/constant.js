@@ -3,7 +3,6 @@ import {
     html,
     css,
     reactjs,
-    nodejs,
     git,
     figma,
     EFS,
@@ -45,10 +44,6 @@ const technologies = [
     {
         name: "React JS",
         icon: reactjs,
-    },
-    {
-        name: "Node JS",
-        icon: nodejs,
     },
     {
         name: "Three JS",

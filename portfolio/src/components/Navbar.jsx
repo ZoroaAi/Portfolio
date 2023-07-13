@@ -67,7 +67,7 @@ function Navbar(){
                             <a href='_blank' download={cv}>
                                 <button className='download_button'>
                                     <FontAwesomeIcon icon={faFileArrowDown} />
-                                    <span>Download My CV</span>
+                                    <span>CV</span>
                                 </button>
                             </a>
                         </li>

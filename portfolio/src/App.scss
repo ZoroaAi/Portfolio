@@ -23,15 +23,29 @@ body.dark{
     @include m.darkModeText();
   }
 
+  // loader
+  .loader_wrapper{
+    background-color: h.$bg-colour-dark
+  }
+
   // Nav
+  li{
+    a{
+      color: h.$text-colour-dark;
+      &:hover{
+        color: h.$contrast-colour-dark;
+      }
+    }
+  }
   .switch{
+    background-color: #c8c8c824;
     .handle{
       width: 18px;
       height: 18px;
       border-radius: 50%;
       background-color: transparent;
-      box-shadow: 3.5px 2.5px 0 0 white;
-      margin-bottom: 5px;
+      box-shadow: 5px 4px 0 1px white;
+      margin: 0 4px 7px 0;
     }
   }
 

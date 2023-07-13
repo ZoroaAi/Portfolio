@@ -1,5 +1,5 @@
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link as ScrollLink} from 'react-scroll';
 

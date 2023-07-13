@@ -10,15 +10,11 @@ import {
     Meliora,
     VotingSystem,
     threejs,
-    construction,
     uop,
+    thinking,
 } from "../assets";
 
 export const navLinks = [
-    {
-        id: "home",
-        title: "Home",
-    },
     {
         id: "about",
         title: "About",
@@ -170,7 +166,7 @@ const projects = [
             color: "text-blue",
         }
         ],
-        image: construction,
+        image: thinking,
         link: "",
     },
 ];

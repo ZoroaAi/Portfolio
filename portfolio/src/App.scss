@@ -1,17 +1,12 @@
 @use './styles/helpers' as h;
 @use './styles/mixins' as m;
 
-*{
-  // color: h.$text-colour;
-}
-
 body{
   background-color: h.$bg-colour;
   margin: 0;
 }
 
 .section__wrapper:not(:last-child){
-  @include m.sectionPadding();
   margin: 0 10em;
 }
 

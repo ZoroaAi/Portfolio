@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { person, clouds, person_dark } from '../assets';
 import '../styles/landing.scss';
 
-import { SectionWrapper } from '../hoc';
 import { DarkModeContext } from './dark_mode/DarkMode';
 import { useContext } from 'react';
 
@@ -12,7 +11,7 @@ function Landing(){
   const {darkMode} = useContext(DarkModeContext);
 
   return(
-    <div className='hero'>
+    <div className='hero' id='home'>
       <div className="hero_main">
         <div className="hero_text">
           <h1 className="intro">Hi! I'm Saurav.</h1>
@@ -20,10 +19,11 @@ function Landing(){
           <a href="#contact" className='hero_button'>Get in Touch</a>
         </div>
         <div className="person_clouds">
-          {darkMode ?
-            <img src={person} alt="Person" style={{ maxWidth: '80%' }} className="hero_img bobbing" />
-            : <img src={person_dark} alt="Person" style={{ maxWidth: '80%' }} className="hero_img bobbing" />
-          }
+          {/* {darkMode ?
+            <img src={person_dark} alt="Person" style={{ maxWidth: '80%' }} className="hero_img bobbing" />
+            : <img src={person} alt="Person" style={{ maxWidth: '80%' }} className="hero_img bobbing" />
+          } */}
+          <img src={person_dark} alt="Person" style={{ maxWidth: '80%' }} className="hero_img bobbing" />
           {/* <img src={clouds} alt="cloud" className='hero_cloud_1 '/> */}
         </div>
       </div>
@@ -49,4 +49,4 @@ function Landing(){
   )
 }
 
-export default SectionWrapper(Landing, 'home');
+export default Landing;

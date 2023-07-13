@@ -31,9 +31,11 @@ $highlight-colour: $highlight-colour-light;
 $contrast-colour: $contrast-colour-light;
 $contrast-colour-darkened: $contrast-colour-light-darkened;
 $scroll-button: $scroll-button-light;
+$element-colour-light: darken($color: $bg-colour, $amount: 5);
 
 // For Computer Loader
 $computer-colour: #b09d95;   
 $ground-colour: #3fed70;
 $ground-colour-2: #b8f254;
 $computer-screen: #9cd7f5;
+

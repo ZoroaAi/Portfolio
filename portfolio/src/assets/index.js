@@ -14,7 +14,7 @@ import EFS from "./projects/EFS.jpg";
 import Meliora from "./projects/MelioraMarket.png";
 import VotingSystem from "./projects/VotingSystem.png";
 
-import construction from './construction.svg';
+import thinking from './thinking.svg';
 import uop from './uop_logo.jpg';
 import airplane from './airplane.svg';
 import person from '../assets/parallax/person.svg';
@@ -38,7 +38,7 @@ export {
   EFS,
   Meliora,
   VotingSystem,
-  construction,
+  thinking,
   uop,
   airplane,
   person,

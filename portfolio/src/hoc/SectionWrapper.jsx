@@ -14,7 +14,6 @@ function HOC() {
             className="section__wrapper"
         >
             <span className="hash-span" id={idName}>
-                &nbsp;
             </span>
             <Component />
         </motion.section>

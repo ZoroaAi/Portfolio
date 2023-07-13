@@ -47,13 +47,13 @@ $breakpoints: (
 
 @mixin sectionMargin {
     @media (min-width: map-get($breakpoints, xs)){
-        margin: 28px 0;
+        margin: 40px 0;
     }
     @media (min-width: map-get($breakpoints, sm)){
-        margin: 20px 0;
+        margin: 40px 0;
     }
     @media (min-width: map-get($breakpoints, md)){
-        margin: 16px 0;
+        margin: 40px 0;
     }
     margin: 32px;
 }

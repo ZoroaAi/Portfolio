@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 
@@ -9,11 +9,13 @@ import '../styles/navbar.scss';
 import { navLinks } from '../constants/constant';
 import { logo, cv } from '../assets';
 import { MobileMenu, MenuButton, ThemeButton } from './helperComps/Menu';
+import { DarkModeContext } from './dark_mode/DarkMode';
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     const [active, setActive] = useState("");
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const { darkMode } = useContext(DarkModeContext);
 
     const handleResize = () => {
         setIsMobile(window.innerWidth <= 768);
@@ -76,7 +78,7 @@ function Navbar(){
             </div>
             {isMobile && (
                 <div className='burger_wrapper' onClick={() => {handleToggle()}}>
-                    <MenuButton isOpen={isOpen} />
+                    <MenuButton isOpen={isOpen} color={darkMode ? 'white': 'black'} />
                 </div>
             )}
         </nav>

@@ -26,7 +26,6 @@
     .about-img{
         width: 100%;
         height: auto;
-        min-height: 70vh;
 
         display: flex;
         justify-content: center;
@@ -39,7 +38,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: map-get(m.$breakpoints, sm)) {
     .aboutMe {
         grid-template-columns: 1fr;
     }

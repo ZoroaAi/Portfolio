@@ -33,19 +33,15 @@ $breakpoints: (
 
 @mixin sectionPadding {
     @media (min-width: map-get($breakpoints, xs)){
-        padding: 16px;
-        margin: 0 2em;
+        padding: 16px 0;
     }
     @media (min-width: map-get($breakpoints, sm)){
-        padding: 16px;
-        margin: 0 2em;
+        padding: 20px 0;
     }
     @media (min-width: map-get($breakpoints, md)){
-        padding: 16px;
-        margin: 0 5em;
+        padding: 9px 0;
     }
     padding: 6px;
-    margin: 0 8em;
 }
 
 @mixin buttonBottom {

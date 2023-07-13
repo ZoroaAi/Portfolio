@@ -36,7 +36,6 @@
   button{
     display: inline-block;
     background-color: h.$contrast-colour;
-    color: h.$text-colour;
     padding: 12px 24px;
     margin-top: 20px;
     border: none;
@@ -47,6 +46,7 @@
     cursor: pointer;
 
     &:hover{
+      color: h.$text-colour;
       background-color: h.$contrast-colour-darkened;
     }
 

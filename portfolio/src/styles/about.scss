@@ -1,4 +1,5 @@
 @use 'mixins' as m;
+@use 'helpers' as h;
 
 .aboutMe{
     display: grid;
@@ -42,7 +43,4 @@
     .aboutMe {
         grid-template-columns: 1fr;
     }
-    // .about-img{
-    //     max-height: none;
-    // }
 }

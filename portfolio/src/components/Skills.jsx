@@ -5,6 +5,7 @@ function Skills(){
     return(
         <div className="skills">
             <div className="skills-heading">
+                <p>What I Know</p>
                 <h2>Skills.</h2>
             </div>
             <div className="carousel">

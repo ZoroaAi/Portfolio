@@ -50,6 +50,18 @@ body.dark{
   }
 
   // Landing
+  .hero_main{
+    button{
+      background-color: h.$contrast-colour-dark;
+      a{
+        color: h.$text-colour-dark;
+      }
+      &:hover{
+        color: h.$text-colour-light;
+        background-color: h.$contrast-colour-dark-darkened;
+      }
+    }
+  }
   .hero_text{
     .intro{
       @include m.HeroText(h.$text-colour-dark);
@@ -65,6 +77,70 @@ body.dark{
     .button_circle{
       background-color: h.$scroll-button-dark;
       border-color: h.$scroll-button-dark;
+    }
+  }
+
+  // About
+  .aboutMe{
+    .about_subText{
+      @include m.sectionSubText(h.$text-colour-dark);
+    }
+    h2{
+      @include m.sectionHeadText(h.$text-colour-dark);
+    }
+    p{
+      color: h.$text-colour-dark;
+    }
+  }
+
+  // Experience
+  .exp_title{
+    p{
+      @include m.sectionSubText(h.$text-colour-dark)
+    }
+    h2{
+      @include m.sectionHeadText(h.$text-colour-dark)
+    }
+  }
+  .exp{
+    .timeline_elem{
+      background-color: h;
+    }
+    .exp_desc{
+      color: h.$text-colour-light;
+    }
+    .exp_company_name{
+      color: h.$text-colour-light;
+    }
+  }
+
+  // Projects
+  .myProjects{
+    p{
+      @include m.sectionSubText(h.$text-colour-dark);
+    }
+    h2{
+      @include m.sectionHeadText(h.$text-colour-dark);
+    }
+  }
+
+  // Skills
+  .skills{
+    p{
+      @include m.sectionSubText(h.$text-colour-dark);
+    }
+    h2{
+      @include m.sectionHeadText(h.$text-colour-dark);
+    }
+  }
+
+  // Contact
+  .contact-wrapper{
+    p{
+      @include m.sectionSubText(h.$text-colour-dark);
+    }
+    h2{
+      @include m.sectionHeadText(h.$text-colour-dark);
     }
   }
 }

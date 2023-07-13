@@ -1,7 +1,7 @@
 @use 'helpers' as h;
 
-@mixin textStyle(){
-    color: h.$text-colour;
+@mixin textStyle($colour: h.$text-colour){
+    color: $colour;
 }
 
 $breakpoints: (
@@ -68,8 +68,8 @@ $breakpoints: (
     height: 350px;
 }
 
-@mixin sectionHeadText{
-    color: h.$text-colour;
+@mixin sectionHeadText($colour: h.$text-colour){
+    color: $colour;
     font-size: 30px;
 
     @media (min-width: map-get($breakpoints, xs)) {
@@ -83,9 +83,9 @@ $breakpoints: (
     }
 }
 
-@mixin sectionSubText{
+@mixin sectionSubText($colour: h.$text-colour){
     font-size: 0.6em;
-    color: h.$text-colour-secondary;
+    color: $colour;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 

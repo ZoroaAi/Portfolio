@@ -159,5 +159,21 @@ $breakpoints: (
 
 @mixin darkModeText{
     color: white;
-    // color: h.$text-colour-light;
+}
+
+// Responsive Clouds
+@mixin cloud1{
+    right: 7%;
+    bottom: 5%;
+    // width: 30%;
+    @media (min-width: map-get($breakpoints, sm)){
+        right: 22px;
+        bottom: 17px;
+        width: 112px;
+    }
+    @media (min-width: map-get($breakpoints, md)){
+        right: 70px;
+        bottom: 23px;
+        width: 145px;
+    }
 }

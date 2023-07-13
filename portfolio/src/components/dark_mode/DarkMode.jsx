@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
 export const DarkModeContext = createContext({
-    theme: 'light',
-    toggleTheme: () => {}
+    darkMode: false,
+    setDarkMode: () => {}
 });
 
 export const DarkModeProvider = ({children}) => {

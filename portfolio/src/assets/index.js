@@ -17,7 +17,9 @@ import VotingSystem from "./projects/VotingSystem.png";
 import construction from './construction.svg';
 import uop from './uop_logo.jpg';
 import airplane from './airplane.svg';
+import person from '../assets/parallax/person.svg';
 import clouds from './parallax/clouds.svg';
+import person_dark from './parallax/person_darker_clouds.svg';
 
 import cv from './CV.docx';
 
@@ -39,6 +41,8 @@ export {
   construction,
   uop,
   airplane,
+  person,
   clouds,
+  person_dark,
   cv,
 };

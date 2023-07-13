@@ -1,6 +1,9 @@
 @use 'mixins' as m;
 @use 'helpers' as h;
 
+.projects_wrapper{
+    @include m.sectionMargin();
+}
 
 .myProjects{
     p{

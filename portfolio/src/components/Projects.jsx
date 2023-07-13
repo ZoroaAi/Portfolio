@@ -60,7 +60,7 @@ const ProjectCard = ({index, name, description, tags, image, link}) => {
 
 function Projects() {
     return (
-        <>
+        <div className='projects_wrapper'>
             <motion.div className='myProjects' variants={textVariant()}>
                 <p>
                     My work
@@ -92,7 +92,7 @@ function Projects() {
                     />
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 

@@ -5,7 +5,8 @@
 }
 
 $breakpoints: (
-    xs: 400px,
+    xs: 500px,
+    s: 550px,
     sm: 640px,
     md: 768px,
     lg: 1024px,
@@ -42,6 +43,50 @@ $breakpoints: (
         padding: 30px 0;
     }
     padding: 6px;
+}
+
+@mixin sectionMargin {
+    @media (min-width: map-get($breakpoints, xs)){
+        margin: 28px 0;
+    }
+    @media (min-width: map-get($breakpoints, sm)){
+        margin: 20px 0;
+    }
+    @media (min-width: map-get($breakpoints, md)){
+        margin: 16px 0;
+    }
+    margin: 32px;
+}
+@mixin sectionMarginTop {
+    @media (min-width: map-get($breakpoints, xs)){
+        margin-top: 150px;
+    }
+    @media (min-width: map-get($breakpoints, sm)){
+        margin-top: 100px;
+    }
+    @media (min-width: map-get($breakpoints, md)){
+        margin-top: 0;
+    }
+    margin-top: 32px;
+}
+
+@mixin experienceFont {
+    font-size: 5px;
+    @media (min-width: map-get($breakpoints, xs)) {
+        font-size: 9px;
+    }
+    @media (min-width: map-get($breakpoints, s)) {
+        font-size: 11px;
+    }
+    @media (min-width: map-get($breakpoints, sm)) {
+        font-size: 13px;
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        font-size: 15px;
+    }
+    @media (min-width: map-get($breakpoints, lg)) {
+        font-size: 13px;
+    }
 }
 
 @mixin buttonBottom {

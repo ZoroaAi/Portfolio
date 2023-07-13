@@ -41,11 +41,8 @@
         color: h.$text-colour-light;
     }
     .exp_desc{
-        font-size: 14px;
         padding-left: 1px;
         letter-spacing: 0.05em;
-        @media (min-width: map-get(m.$breakpoints, xs)) {
-            font-size: 12px;
-        }
+        @include m.experienceFont();
     }
 }

@@ -7,8 +7,8 @@
     align-items: center;
 
     height: 100vh;
-
     overflow: hidden;
+    @include m.sectionMarginTop();
 
     p{
         margin: 0;

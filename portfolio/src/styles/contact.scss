@@ -5,10 +5,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     height: 100vh;
     overflow: hidden;
-    @include m.sectionMarginTop();
+    margin: 15px 0;
+    // @include m.sectionMarginTop();
 
     p{
         margin: 0;
@@ -84,7 +86,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }

@@ -23,13 +23,15 @@ const  MainContent = () => {
     <BrowserRouter>
       <div className={darkMode ? 'dark-theme' : ''}>
         <Navbar/>
-        <Landing/>
-        <AboutMe />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-        <StarCanvas />
+        <div class="stars_relative">
+          <Landing/>
+          <AboutMe />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+          <StarCanvas />
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

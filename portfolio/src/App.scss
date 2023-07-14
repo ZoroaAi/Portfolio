@@ -14,6 +14,13 @@ body{
   }
 }
 
+.stars_relative{
+  position: relative;
+  .star_canvas{
+    display: none;
+  }
+}
+
 // Dark Mode
 body.dark{
   background-color: h.$bg-colour-dark;
@@ -146,5 +153,18 @@ body.dark{
   // Footer
   footer{
     color: h.$text-colour-dark;
+  }
+
+  // Stars
+  .star_canvas{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }

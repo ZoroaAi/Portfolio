@@ -2,11 +2,14 @@
 @use 'mixins' as m;
 
 footer{
-    margin: 0 2em;
+    width: 100%;
     border-top: 2px solid h.$text-colour;
 
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     @include m.sectionSubText();
+
+
 }

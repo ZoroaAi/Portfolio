@@ -142,4 +142,9 @@ body.dark{
       @include m.sectionHeadText(h.$text-colour-dark);
     }
   }
+
+  // Footer
+  footer{
+    color: h.$text-colour-dark;
+  }
 }

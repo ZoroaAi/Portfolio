@@ -70,6 +70,16 @@ $breakpoints: (
     margin-top: 32px;
 }
 
+@mixin contactPadding {
+    padding: 0 4em;
+    @media (min-width: map-get($breakpoints, xs)) {
+        padding: 0 1.5em;
+    }
+    @media (min-width: map-get($breakpoints, s)) {
+        padding: 0 2em;
+    }
+}
+
 @mixin experienceFont {
     font-size: 5px;
     @media (min-width: map-get($breakpoints, xs)) {

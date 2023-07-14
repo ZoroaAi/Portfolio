@@ -90,8 +90,10 @@ function Contact() {
     return (
         <div className="contact-wrapper" id='contact'>
             <motion.div variants={slideIn('left','tween',0.2,1)} className="contact-inside-wrapper">
-                <p>Get in touch</p>
-                <h2>Contact.</h2>
+                <div className="contact_title">
+                    <p>Get in touch</p>
+                    <h2>Contact.</h2>
+                </div>
                 <form ref={form} onSubmit={sendEmail} className='email-form'>
                     <div className="title-email">
                         <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>

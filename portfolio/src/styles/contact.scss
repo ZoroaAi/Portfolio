@@ -3,25 +3,29 @@
 
 .contact-wrapper{
     display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(555px, 1fr));
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
 
     min-height: 100vh;
     overflow: hidden;
-    margin: 15px 4em;
+    margin: 15px 0;
+    
+    @include m.contactPadding();
 
-    p{
-        margin: 0;
-        @include m.sectionSubText();
-    }
-    h2{
-        margin: 0;
-        @include m.sectionHeadText();
+    .contact_title{
+        p{
+            margin: 0;
+            @include m.sectionSubText();
+        }
+        h2{
+            margin: 0;
+            @include m.sectionHeadText();
+        }
     }
 
     .contact-inside-wrapper{
-        width: 40em;
+        max-width: 31em;
     }
 
     .email-form{
@@ -43,6 +47,12 @@
             gap: 2px;
             input{
                 flex: 1;
+            }
+            @media (max-width: map-get(m.$breakpoints, md)) {
+                flex-direction: column;
+                &> *{
+                    margin: 3px 0;
+                }
             }
         }
 
@@ -67,31 +77,32 @@
         }
     }
 
-    .earth_wrapper{
+    .earth_wrapper {
         width: 100%;
         max-width: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        position: relative; // Needed for positioning the inner .earth element
         @include m.responsiveHeight();
-        .earth{
+
+        .earth {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            width: 100%;
-            height: 100%;
-
-            canvas{
+            canvas {
                 width: 100%;
+                height: 100%;
             }
         }
     }
 }
 
-@media (max-width: 799px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
+// @media (max-width: 940px) {
+//     .contact-wrapper {
+//         grid-template-columns: 1fr;
+//     }
+// }

@@ -11,7 +11,7 @@ function HOC() {
             initial='hidden'
             whileInView={'show'}
             viewport={{once: true, amount: 0.25}}
-            className="section__wrapper"
+            className='section__wrapper'
         >
             <span className="hash-span" id={idName}>
             </span>

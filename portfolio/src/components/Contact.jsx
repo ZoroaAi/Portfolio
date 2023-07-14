@@ -2,21 +2,28 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 import '../styles/contact.scss';
-import { SectionWrapper } from '../hoc';
 import Loader from './Loaders/CanvasLoader';
 import { slideIn } from '../utils/motion';
 
+const useResponsiveModel = () => {
+    const { size } = useThree()
+    // Calculate a responsive scale value based on canvas size
+    const scale = Math.min(size.width, size.height) / 150
+    return scale
+}
+
 const Earth = () => {
     const earth = useGLTF('./models/planet/scene.gltf');
+    const scale = useResponsiveModel();
 
     return(
         <primitive 
             object={earth.scene}
-            scale={2.5}
+            scale={scale}
             position-y={0}
         />
     )
@@ -34,6 +41,7 @@ const EarthCanvas = () => {
                 far: 200,
                 position: [-4, 3, 6]
             }}
+            className='earth'
         >
             <Suspense fallback={<Loader/>}>
                 <OrbitControls 
@@ -80,33 +88,26 @@ function Contact() {
     }
 
     return (
-        <div>
-            
-                <div className="contact-wrapper">
-                    <motion.div variants={slideIn('left','tween',0.2,1)}>
-                        <div className="contact-inside-wrapper">
-                            <p>Get in touch</p>
-                            <h2>Contact.</h2>
-                            <form ref={form} onSubmit={sendEmail} className='email-form'>
-                                <div className="title-email">
-                                    <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>
-                                    <input type="email" placeholder="Email" value={email} name='email' onChange={e => setEmail(e.target.value)} required/>
-                                </div>
-                                <textarea placeholder="Message" value={message} name='message' onChange={e => setMessage(e.target.value)}  required></textarea>
-                                <button type="submit" disabled={isSending}>
-                                    {isSending ? 'Sending...' : 'Send' }
-                                </button>
-                            </form>
-                        </div>
-                    </motion.div>
-                    <motion.div className='earth_wrapper' variants={slideIn('right','tween',0.2,1)}>
-                        <div className="earth">
-                           <EarthCanvas />
-                        </div>
-                    </motion.div>
-                </div>
+        <div className="contact-wrapper" id='contact'>
+            <motion.div variants={slideIn('left','tween',0.2,1)} className="contact-inside-wrapper">
+                <p>Get in touch</p>
+                <h2>Contact.</h2>
+                <form ref={form} onSubmit={sendEmail} className='email-form'>
+                    <div className="title-email">
+                        <input type="text" placeholder="Your Name" value={fromName} name='from_name' onChange={e => setFromName(e.target.value)} required/>
+                        <input type="email" placeholder="Email" value={email} name='email' onChange={e => setEmail(e.target.value)} required/>
+                    </div>
+                    <textarea placeholder="Message" value={message} name='message' onChange={e => setMessage(e.target.value)}  required></textarea>
+                    <button type="submit" disabled={isSending}>
+                        {isSending ? 'Sending...' : 'Send' }
+                    </button>
+                </form>
+            </motion.div>
+            <motion.div className='earth_wrapper' variants={slideIn('right','tween',0.2,1)}>
+                <EarthCanvas />
+            </motion.div>
         </div>
     );
 }
 
-export default SectionWrapper(Contact, 'contact');
+export default Contact;

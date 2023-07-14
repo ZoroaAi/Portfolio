@@ -2,15 +2,14 @@
 @use 'mixins' as m;
 
 .contact-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(555px, 1fr));
+    gap: 20px;
 
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
-    margin: 15px 0;
-    // @include m.sectionMarginTop();
+    margin: 15px 4em;
 
     p{
         margin: 0;
@@ -21,11 +20,16 @@
         @include m.sectionHeadText();
     }
 
+    .contact-inside-wrapper{
+        width: 40em;
+    }
+
     .email-form{
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        max-width: 30em;
         margin-top: 1em;
 
         &> * {
@@ -43,7 +47,7 @@
         }
 
         textarea{
-            width: 592px; 
+            width: 100%; 
             height: 312px;
             resize: none;
         }
@@ -65,7 +69,7 @@
 
     .earth_wrapper{
         width: 100%;
-
+        max-width: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -86,7 +90,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
     }

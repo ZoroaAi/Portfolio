@@ -6,7 +6,7 @@ body{
   margin: 0;
 }
 
-.section__wrapper:not(:last-child){
+.section__wrapper{
   margin: 0 4em;
   @include m.sectionPadding();
   @media (max-width: map-get(m.$breakpoints,xs)) {

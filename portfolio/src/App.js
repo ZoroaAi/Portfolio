@@ -28,10 +28,8 @@ const  MainContent = () => {
         <Experience />
         <Projects />
         <Skills />
-        <div className="contact">
-          <Contact />
-          <StarCanvas />
-        </div>
+        <Contact />
+        <StarCanvas />
         <Footer />
       </div>
     </BrowserRouter>

@@ -15,6 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StarCanvas from './components/canvas/StarCanvas';
 import { DarkModeContext, DarkModeProvider } from './components/dark_mode/DarkMode';
+import { Loading, LoadingProgressContext } from './components/Loaders/LoadProgressContext';
 
 const  MainContent = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -38,23 +39,31 @@ const  MainContent = () => {
   );
 }
 
+function ContentContainer() {
+  const {isLoading} = useContext(LoadingProgressContext);
+  return (
+    <>
+      <AnimatePresence>
+        {isLoading && <PageLoader isLoading={isLoading} />}
+      </AnimatePresence>
+      {!isLoading &&
+        <MainContent />
+      }
+    </>
+  );
+}
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
+  
+  console.log('App isLoading Before: '+ isLoading);
 
   return (
     <DarkModeProvider>
-      <AnimatePresence>
-        {isLoading && <PageLoader loading={isLoading} />}
-      </AnimatePresence>
-      {!isLoading && 
-          <MainContent />
-      }
+      <LoadingProgressContext.Provider value={{isLoading, setIsLoading }}>
+        <Loading />
+        <ContentContainer />
+      </LoadingProgressContext.Provider>
     </DarkModeProvider>
   );
 }

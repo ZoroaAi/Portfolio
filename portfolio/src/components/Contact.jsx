@@ -31,13 +31,6 @@ const Earth = () => {
 }
 
 const EarthCanvas = () => {
-    const { progress } = useProgress();
-    const { setProgress } = useContext(LoadingProgressContext);
-  
-    useEffect(() => {
-      setProgress(progress);
-    }, [progress, setProgress]);
-    
     return (
         <Canvas
             shadows
@@ -60,7 +53,6 @@ const EarthCanvas = () => {
                 />
                 <Earth />
             </Suspense>
-
         </Canvas>
     )
 }

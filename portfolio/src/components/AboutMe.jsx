@@ -1,17 +1,15 @@
-import { Suspense, useContext, useEffect, useRef, useState} from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { Canvas, useThree } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF, useProgress } from '@react-three/drei';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { DirectionalLightHelper, Object3D, SpotLightHelper } from 'three';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
-
 
 import Loader from './Loaders/CanvasLoader';
 
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
-import { LoadingProgressContext } from './Loaders/LoadProgressContext';
 
 const Room = (isMobile) => {
     const room = useGLTF('/models/room/room_model.glb');
@@ -23,6 +21,7 @@ const Room = (isMobile) => {
     const { scene } = useThree();
 
     useEffect(() => {
+
         // if (dirLightRef.current) { 
         //     const dirHelper = new DirectionalLightHelper(dirLightRef.current);
         //     scene.add(dirHelper);
@@ -83,24 +82,6 @@ const Room = (isMobile) => {
 }
 
 const RoomModel = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect( () => {
-        const mediaQuery = window.matchMedia('(max-width:500px)');
-
-        setIsMobile(mediaQuery.matches);
-
-        const handleMediaQueryChange = (event) => {
-            setIsMobile(event.matches);
-        }
-
-        mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-        return () => {
-            mediaQuery.removeEventListener('change', handleMediaQueryChange);
-        }
-    }, [])
-
     return (
         <Canvas 
             frameLoop='demand'
@@ -108,29 +89,22 @@ const RoomModel = () => {
             camera={{position: [40,70,30], fov: 14}}
             gl={{preserveDrawingBuffer: true}}
         >
-        <Suspense fallback={<Loader/>} >
-            <OrbitControls 
-            enableZoom= {false}
-            maxPolarAngle= {Math.PI / 2}
-            minPolarAngle= {Math.PI / 4}
-            maxAzimuthAngle= {Math.PI / 4}
-            minAzimuthAngle= {Math.PI / 4}
-            />
-            <Room isMobile={isMobile} />
-        </Suspense>
-        <Preload all />
+            <Suspense fallback={<Loader/>} >
+                <OrbitControls 
+                enableZoom= {false}
+                maxPolarAngle= {Math.PI / 2}
+                minPolarAngle= {Math.PI / 4}
+                maxAzimuthAngle= {Math.PI / 4}
+                minAzimuthAngle= {Math.PI / 4}
+                />
+                <Room/>
+            </Suspense>
+            <Preload all />
         </Canvas>
     )
 }
 
 function AboutMe(){
-    const { progress } = useProgress();
-    const { setProgress } = useContext(LoadingProgressContext);
-  
-    useEffect(() => {
-      setProgress(progress);
-    }, [progress, setProgress]);
-
     return(
         <div className="aboutMe">
             <motion.div className="about-info" variants={textVariant()}>

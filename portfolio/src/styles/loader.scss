@@ -193,6 +193,12 @@
             margin-top: 15px;
             border-radius: 5em;
             background-color: h.$contrast-colour;
+            .loading_bar{
+                height: 0.8em;
+                border-radius: 5em;
+                background-color: h.$ground-colour;
+                transition: width 0.3s ease-in-out;
+            }
         }
     }
 }

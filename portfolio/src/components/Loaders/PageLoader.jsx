@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import '../../styles/loader.scss';
 import { clouds } from "../../assets";
@@ -30,18 +30,24 @@ function Cloud({speed, i}) {
     );
 }
 
-const PageLoader = ({loading}) => {
+const PageLoader = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const { progress } = useContext(LoadingProgressContext);
+    const { isLoading } = useContext(LoadingProgressContext);
+    const controls = useAnimation();
 
     useEffect(() => {
         setIsVisible(true);
-    }, [loading]);
+        controls.start({
+            width: '100%',
+            transition: { duration: 3 }
+        })
+    }, [isLoading]);
+
     return (
         <motion.div 
             className="loader_wrapper"
             initial={{ opacity: 1 }}
-            animate={{ opacity: loading ? 1 : 0 }}
+            animate={{ opacity: isLoading ? 1 : 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
@@ -148,16 +154,16 @@ const PageLoader = ({loading}) => {
                 <div className="bar_wrapper">
                     <motion.div
                         className="loading_bar"
-                        initial= {{ opacity: 0, scale:0.8 }}
-                        animate={{ opacity: 1, scale: [1,1.1,1]}}
+                        initial= {{ opacity: 1, scale:0.8, width: '0%' }}
+                        animate={{ 
+                            opacity: isLoading ? 1 : 0, 
+                            scale: [1,1.1,1],
+                            width: isLoading ? '100%' : '0%',
+                        }}
                         transition={{
                             duration: 0.7,
                             delay: 0.8,
                             ease: 'easeOut'
-                        }}
-                        style={{
-                            visibility: isVisible ? 'visible' : 'hidden',
-                            width: `${progress}%`,
                         }}
                     />
                 </div>

@@ -1,13 +1,14 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Suspense } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF, useProgress } from "@react-three/drei";
 
 import '../styles/contact.scss';
 import Loader from './Loaders/CanvasLoader';
 import { slideIn } from '../utils/motion';
+import { LoadingProgressContext } from './Loaders/LoadProgressContext';
 
 const useResponsiveModel = () => {
     const { size } = useThree()
@@ -30,6 +31,13 @@ const Earth = () => {
 }
 
 const EarthCanvas = () => {
+    const { progress } = useProgress();
+    const { setProgress } = useContext(LoadingProgressContext);
+  
+    useEffect(() => {
+      setProgress(progress);
+    }, [progress, setProgress]);
+    
     return (
         <Canvas
             shadows

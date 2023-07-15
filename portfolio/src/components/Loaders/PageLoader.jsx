@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { motion, animate } from "framer-motion";
+import { useContext, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import '../../styles/loader.scss';
 import { clouds } from "../../assets";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons'
+import { LoadingProgressContext } from "./LoadProgressContext";
 
 function Cloud({speed, i}) {
     return (
@@ -30,26 +31,12 @@ function Cloud({speed, i}) {
 }
 
 const PageLoader = ({loading}) => {
-    const [loadingProgress, setLoadingProgress] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
+    const { progress } = useContext(LoadingProgressContext);
 
     useEffect(() => {
         setIsVisible(true);
-
-        if (loading) {
-        const controls = animate(0, 100, {
-            duration: 3,
-            onUpdate(value) {
-            setLoadingProgress(value);
-            },
-        });
-
-        return controls.stop;
-        } else {
-        setLoadingProgress(100);
-        }
     }, [loading]);
-
     return (
         <motion.div 
             className="loader_wrapper"
@@ -170,7 +157,7 @@ const PageLoader = ({loading}) => {
                         }}
                         style={{
                             visibility: isVisible ? 'visible' : 'hidden',
-                            width: `${loadingProgress}%`,
+                            width: `${progress}%`,
                         }}
                     />
                 </div>

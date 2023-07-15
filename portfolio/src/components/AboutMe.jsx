@@ -1,6 +1,6 @@
-import { Suspense, useEffect, useRef, useState} from 'react'
+import { Suspense, useContext, useEffect, useRef, useState} from 'react'
 import { Canvas, useThree } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, Preload, useGLTF, useProgress } from '@react-three/drei';
 import { DirectionalLightHelper, Object3D, SpotLightHelper } from 'three';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
@@ -11,6 +11,7 @@ import Loader from './Loaders/CanvasLoader';
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
+import { LoadingProgressContext } from './Loaders/LoadProgressContext';
 
 const Room = (isMobile) => {
     const room = useGLTF('/models/room/room_model.glb');
@@ -123,6 +124,13 @@ const RoomModel = () => {
 }
 
 function AboutMe(){
+    const { progress } = useProgress();
+    const { setProgress } = useContext(LoadingProgressContext);
+  
+    useEffect(() => {
+      setProgress(progress);
+    }, [progress, setProgress]);
+
     return(
         <div className="aboutMe">
             <motion.div className="about-info" variants={textVariant()}>

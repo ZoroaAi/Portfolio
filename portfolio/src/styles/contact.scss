@@ -80,7 +80,7 @@
     .earth_wrapper {
         width: 100%;
         max-width: 600px;
-        position: relative; // Needed for positioning the inner .earth element
+        position: relative;
         @include m.responsiveHeight();
 
         .earth {
@@ -100,9 +100,3 @@
         }
     }
 }
-
-// @media (max-width: 940px) {
-//     .contact-wrapper {
-//         grid-template-columns: 1fr;
-//     }
-// }

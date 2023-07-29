@@ -7,7 +7,7 @@ import { OrbitControls, useGLTF, useProgress } from "@react-three/drei";
 
 import '../styles/contact.scss';
 import Loader from './Loaders/CanvasLoader';
-import { slideIn } from '../utils/motion';
+import { fadeIn, slideIn, staggerContainer } from '../utils/motion';
 import { LoadingProgressContext } from './Loaders/LoadProgressContext';
 
 const useResponsiveModel = () => {
@@ -88,8 +88,18 @@ function Contact() {
     }
 
     return (
-        <div className="contact-wrapper" id='contact'>
-            <motion.div variants={slideIn('left','tween',0.2,1)} className="contact-inside-wrapper">
+        <motion.section
+            variants={staggerContainer()}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{once: true, amount: 0.25}} 
+            className="contact-wrapper" 
+            id='contact'
+        >
+            <motion.div 
+                variants={slideIn('left','tween',0.2,1)} 
+                className="contact-inside-wrapper"
+            >
                 <div className="contact_title">
                     <p>Get in touch</p>
                     <h2>Contact.</h2>
@@ -105,10 +115,13 @@ function Contact() {
                     </button>
                 </form>
             </motion.div>
-            <motion.div className='earth_wrapper' variants={slideIn('right','tween',0.2,1)}>
+            <motion.div 
+                className='earth_wrapper'
+                variants={slideIn('right','tween',0.2,1)}
+            >
                 <EarthCanvas />
             </motion.div>
-        </div>
+        </motion.section>
     );
 }
 

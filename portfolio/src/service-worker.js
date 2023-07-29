@@ -1,2 +1,76 @@
-if(!self.define){let e,a={};const s=(s,i)=>(s=new URL(s+".js",i).href,a[s]||new Promise((a=>{if("document"in self){const e=document.createElement("script");e.src=s,e.onload=a,document.head.appendChild(e)}else e=s,importScripts(s),a()})).then((()=>{let e=a[s];if(!e)throw new Error(`Module ${s} didn’t register its module`);return e})));self.define=(i,c)=>{const d=e||("document"in self?document.currentScript.src:"")||location.href;if(a[d])return;let f={};const r=e=>s(e,d),n={module:{uri:d},exports:f,require:r};a[d]=Promise.all(i.map((e=>n[e]||r(e)))).then((e=>(c(...e),f)))}}define(["./workbox-a482575e"],(function(e){"use strict";self.addEventListener("message",(e=>{e.data&&"SKIP_WAITING"===e.data.type&&self.skipWaiting()})),e.precacheAndRoute([{url:"asset-manifest.json",revision:"6b875d4191a6a36e43c0e5b5609a4d7b"},{url:"icons/apple-icon-180.png",revision:"97b61e0f536d237234b768c5f776421b"},{url:"icons/apple-splash-1125-2436.jpg",revision:"7227ff3379f21a29356983aaa4613bca"},{url:"icons/apple-splash-1136-640.jpg",revision:"af7a30998cac3ddb571a0dc09b31a319"},{url:"icons/apple-splash-1170-2532.jpg",revision:"27bbf4ada79a2fc96e7a6100d600abf2"},{url:"icons/apple-splash-1179-2556.jpg",revision:"98b1dce2bae50d5d29d8f2edf96e9890"},{url:"icons/apple-splash-1242-2208.jpg",revision:"6e560a843b49503dfc1d9e1e5fae9fd8"},{url:"icons/apple-splash-1242-2688.jpg",revision:"aa01161a7dd4cefb73f4ed703139a097"},{url:"icons/apple-splash-1284-2778.jpg",revision:"8a1e6e8dc663878a86f53eb534d515c6"},{url:"icons/apple-splash-1290-2796.jpg",revision:"6948a07728c259bf55154e7158c58e9f"},{url:"icons/apple-splash-1334-750.jpg",revision:"c4313d7f9904efda22ee5262f1e3f176"},{url:"icons/apple-splash-1536-2048.jpg",revision:"194ffb0b60b15e74aa2daaa93b17e8ed"},{url:"icons/apple-splash-1620-2160.jpg",revision:"cac55a9d05517660689674ded3a644a0"},{url:"icons/apple-splash-1668-2224.jpg",revision:"26a4542e0b5d90d49952ae90a820b764"},{url:"icons/apple-splash-1668-2388.jpg",revision:"601bf54f9a9226eae86759a246372c24"},{url:"icons/apple-splash-1792-828.jpg",revision:"61b0f6816274dba63c14f19c17756aa5"},{url:"icons/apple-splash-2048-1536.jpg",revision:"21415f733e5bbd3649a5bd3c52d501ea"},{url:"icons/apple-splash-2048-2732.jpg",revision:"b022978b2876916aa57d23b0728d6794"},{url:"icons/apple-splash-2160-1620.jpg",revision:"1d4081171c8e66c8296a5c8aea96d502"},{url:"icons/apple-splash-2208-1242.jpg",revision:"11b1023f00bba4e44751595feef65d42"},{url:"icons/apple-splash-2224-1668.jpg",revision:"51c24a580066696de4a25e8a6b9609ba"},{url:"icons/apple-splash-2388-1668.jpg",revision:"15af8eda0e23dee807a5305fc806479b"},{url:"icons/apple-splash-2436-1125.jpg",revision:"bb8c071bc7fa78ee7f36ff76b10994a1"},{url:"icons/apple-splash-2532-1170.jpg",revision:"b7562d9f5ab05921ab3e7d748da08d32"},{url:"icons/apple-splash-2556-1179.jpg",revision:"913a896864ddff8620e980f70dda0fd4"},{url:"icons/apple-splash-2688-1242.jpg",revision:"20365a810c13f8a4620402ebc52888f8"},{url:"icons/apple-splash-2732-2048.jpg",revision:"607df58d8a4172c845dbf1031d6ac754"},{url:"icons/apple-splash-2778-1284.jpg",revision:"647ea5381ac116eb184c45ffc801cea7"},{url:"icons/apple-splash-2796-1290.jpg",revision:"e916134531dc1c72ef988377d7eeda57"},{url:"icons/apple-splash-640-1136.jpg",revision:"3efaf2802f03e1967db535ffd53c29cb"},{url:"icons/apple-splash-750-1334.jpg",revision:"0ab51b09f71add958bcbaceba4e06508"},{url:"icons/apple-splash-828-1792.jpg",revision:"c3fa3f0a6c90cff998c887a532831d3d"},{url:"icons/manifest-icon-192.maskable.png",revision:"ee33ec3d9bef2a5f8424e57fc2e2c379"},{url:"icons/manifest-icon-512.maskable.png",revision:"f08fbda828660b7c045d23db0aefd630"},{url:"index.html",revision:"9b9db688ccf28f45a8e4163502a243dc"},{url:"manifest.json",revision:"c6bbf7846a4e521f58a3c3a962626e79"},{url:"models/planet/license.txt",revision:"825b17d247f660832d931c9516fdf088"},{url:"models/planet/scene.bin",revision:"eaf372ae93fbd26d862318e1d712cd32"},{url:"models/planet/scene.gltf",revision:"e18815e02dfb8989874067b264bbdabc"},{url:"models/planet/textures/Clouds_baseColor.png",revision:"75d3ca1128995c4434dcc76a4098c99f"},{url:"models/planet/textures/Planet_baseColor.png",revision:"1821eed6565b52b7a4e84320ada536bf"},{url:"robots.txt",revision:"fa1ded1ed7c11438a9b0385b1e112850"},{url:"service-worker.js",revision:"93b5e421c5751cde94d9f265588a77f7"},{url:"service-worker.js.LICENSE.txt",revision:"4e0e34f265fae8f33b01b27ae29d9d6f"},{url:"static/css/main.023fa003.css",revision:"fd8ff832c6937ee01c36ea222f119464"},{url:"static/js/main.cb69e43b.js",revision:"53f5ef2bec1d7e2b8c3127a2ac6f76fd"},{url:"static/js/main.cb69e43b.js.LICENSE.txt",revision:"13b7aee0d4d008cb8d54dcbbd2566387"},{url:"static/media/airplane.a903d448958ec75a032fecd0d5ddc0ee.svg",revision:"67a14a26924ff5dd396773dded20137e"},{url:"static/media/clouds.b523f6268750c0c5a9465e219f376188.svg",revision:"305b7b7bf17b8341d4c61d0dc017fb9d"},{url:"static/media/CV.c9676018703481278500.docx",revision:"97628069dd5b8b80d5ca4878cfddc898"},{url:"static/media/EFS.8cbc4c2e27a1e03b5ced.jpg",revision:"b10b3afc761b23ed88348205a8ec1111"},{url:"static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",revision:"b06871f281fee6b241d60582ae9369b9"},{url:"static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",revision:"af7ae505a9eed503f8b8e6982036873e"},{url:"static/media/fontawesome-webfont.8b43027f47b20503057d.eot",revision:"674f50d287a8c48dc19ba404d20fe713"},{url:"static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",revision:"912ec66d7572ff821749319396470bde"},{url:"static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",revision:"fee66e712a8a08eef5805a46892932ad"},{url:"static/media/github.ed1c06d925fff0b57e32.png",revision:"69b7e397e348747e802b90e5eb0bfbd4"},{url:"static/media/Logo.5664d22d0f0fe5bf38f5.png",revision:"6ea68b7729c71b9f2d762eacf88d4ea6"},{url:"static/media/MelioraMarket.5a529be816e35f5cd0c8.png",revision:"2d39db26ebff2d08dbf5912e5e58a8f3"},{url:"static/media/person_darker_clouds.839c166e302aeb06a71bc6044cb2d394.svg",revision:"c6360939bbf5cb44c48cc5f82d327ef4"},{url:"static/media/person.cbf119a9c64eee40b8e13f9dbbf3a87d.svg",revision:"4d90d48b157b786095b35af4298a3036"},{url:"static/media/thinking.b0cb2a440b610559841171e13c7d1ea3.svg",revision:"2727f9b611de220304b14010c4015fe0"},{url:"static/media/threejs.34d1dab4caddf9c51437e9bafd282582.svg",revision:"d75c09a5a967d4425a175b6bfe5ca4e5"},{url:"static/media/VotingSystem.fae73b1d9a7cfb62036c.png",revision:"e59a2e4f4cc7756dcbd6df5f21f3a81c"}],{ignoreURLParametersMatching:[/^utm_/,/^fbclid$/]})}));
+import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
+
+if (!self.define) {
+    let e,
+        a = {};
+    const s = (s, i) => (
+        (s = new URL(s + ".js", i).href),
+        a[s] ||
+            new Promise((a) => {
+                if ("document" in self) {
+                    const e = document.createElement("script");
+                    (e.src = s), (e.onload = a), document.head.appendChild(e);
+                } else (e = s), importScripts(s), a();
+            }).then(() => {
+                let e = a[s];
+                if (!e) throw new Error(`Module ${s} didn’t register its module`);
+                return e;
+            })
+    );
+    self.define = (i, c) => {
+        const d = e || ("document" in self ? document.currentScript.src : "") || location.href;
+        if (a[d]) return;
+        let f = {};
+        const r = (e) => s(e, d),
+            n = { module: { uri: d }, exports: f, require: r };
+        a[d] = Promise.all(i.map((e) => n[e] || r(e))).then((e) => (c(...e), f));
+    };
+}
+define(["./workbox-a482575e"], function (e) {
+    "use strict";
+    self.addEventListener("message", (e) => {
+        e.data && "SKIP_WAITING" === e.data.type && self.skipWaiting();
+    }),
+        e.precacheAndRoute(self.__WB_MANIFEST);
+});
+
+// Ensure that our service worker takes control of the page as soon as possible.
+addEventListener('install', (event) => {
+    event.waitUntil(self.skipWaiting());
+  });
+  addEventListener('activate', (event) => {
+    event.waitUntil(self.clients.claim());
+});
+  
+// Cache CSS and JavaScript Files
+registerRoute(
+    /\.(?:js|css)$/,
+    new CacheFirst({
+        cacheName: 'static-resources',
+        plugins: [
+        new ExpirationPlugin({
+            maxEntries: 60,
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+        }),
+        ],
+    }),
+);
+
+// Cache images
+registerRoute(
+    /\.(?:png|jpg|jpeg|svg|gif)$/,
+    new CacheFirst({
+        cacheName: 'images',
+        plugins: [
+        new ExpirationPlugin({
+            maxEntries: 60,
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+        }),
+        ],
+    }),
+);
+
 //# sourceMappingURL=service-worker.js.map

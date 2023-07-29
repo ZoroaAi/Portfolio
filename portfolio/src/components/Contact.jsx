@@ -1,14 +1,13 @@
-import { useState, useRef, useContext, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Suspense } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF, useProgress } from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 import '../styles/contact.scss';
 import Loader from './Loaders/CanvasLoader';
-import { fadeIn, slideIn, staggerContainer } from '../utils/motion';
-import { LoadingProgressContext } from './Loaders/LoadProgressContext';
+import { slideIn, staggerContainer } from '../utils/motion';
 
 const useResponsiveModel = () => {
     const { size } = useThree()

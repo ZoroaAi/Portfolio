@@ -11,8 +11,18 @@ const Stars = (props) => {
       const generateStars = async () => {
         const worker = new Worker(new URL('../../workers/starWorker', import.meta.url));
         const actions = wrap(worker);
-        const stars = await actions.generateStars();
-        setSphere(stars);
+
+        const storedStars = localStorage.getItem('stars');
+
+        // Retrieve stored stars (for speed)
+        if (storedStars){
+          setSphere(JSON.parse(storedStars));
+        }else{
+          const stars = await actions.generateStars();
+          localStorage.setItem('stars', JSON.stringify(stars));
+          setSphere(stars);
+        }
+
         worker.terminate();
       };
       
@@ -33,7 +43,7 @@ const Stars = (props) => {
             transparent
             color='#f272c8'
             size={0.001}
-            sizeAttenuation={true}
+            sizeAttenuation={false}
             depthWrite={false}
           />
         </Points>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Suspense } from "react";
@@ -63,6 +63,10 @@ function Contact() {
     const [isSending, setIsSending] = useState(false);
 
     const form = useRef();
+
+    useEffect(() => {
+        console.log('Contact Section Rendered.');
+    },[]);
 
     function sendEmail(e) {
         e.preventDefault();

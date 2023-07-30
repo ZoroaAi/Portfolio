@@ -97,6 +97,11 @@ body.dark{
     p{
       color: h.$text-colour-dark;
     }
+    .room_img_link{
+      .image_icon{
+        color: white;
+      }
+    }
   }
 
   // Experience

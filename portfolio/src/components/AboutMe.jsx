@@ -1,11 +1,19 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import '../styles/about.scss';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import RoomCanvas from './canvas/RoomCanvas';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImages } from '@fortawesome/free-solid-svg-icons'
+
+import { room } from '../assets';
 
 function AboutMe(){
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const closeModal = () => setIsModalOpen(false);
     return(
         <div className="aboutMe">
             <motion.div className="about-info" variants={textVariant()}>
@@ -20,7 +28,31 @@ function AboutMe(){
                 <motion.div className='room_wrapper' variants={fadeIn('up', 'spring',0.8,0.75)}>
                     <RoomCanvas/>
                 </motion.div>
+                <button className='room_img_link' onClick={() => setIsModalOpen(true)}>
+                    <FontAwesomeIcon className='image_icon' icon={faImages}/>
+                </button>
             </div>
+            <AnimatePresence>
+                {isModalOpen && (
+                <motion.div 
+                    className='room_modal'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={closeModal} 
+                >
+                    <img 
+                        src={room} 
+                        alt="Modal Content" 
+                        style={{ 
+                            maxHeight: "80vh",
+                            maxWidth: "80vw",
+                            objectFit: "contain"
+                        }}
+                    />
+                </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     )
 }

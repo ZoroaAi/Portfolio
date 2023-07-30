@@ -32,6 +32,8 @@
         justify-content: center;
         align-items: center;
 
+        position: relative;
+
         .room_wrapper{
             width: 100%;
             height: 90%;
@@ -41,6 +43,37 @@
             width: 1000%;
             height: 100%;
         }
+
+        .room_img_link{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 100px;
+            bottom: 190px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            
+            .image_icon{
+                width: 100%;
+                height: 100%;
+                color: h.$text-colour-light;
+            }
+        }
+    }
+
+    .room_modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.5);
     }
 }
 

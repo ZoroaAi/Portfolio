@@ -19,6 +19,7 @@ import airplane from './airplane.svg';
 import person from '../assets/parallax/person.svg';
 import clouds from './parallax/clouds.svg';
 import person_dark from './parallax/person_darker_clouds.svg';
+import room from './room_image.png';
 
 import cv from './CV.docx';
 
@@ -43,4 +44,5 @@ export {
   clouds,
   person_dark,
   cv,
+  room
 };

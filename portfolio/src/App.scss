@@ -1,10 +1,22 @@
 @use './styles/helpers' as h;
 @use './styles/mixins' as m;
 
+html{
+  overflow-x: hidden;
+}
+
 body{
   background-color: h.$bg-colour;
   margin: 0;
 }
+
+::-webkit-scrollbar{
+  width: 0.5em;
+}
+::-webkit-scrollbar-thumb{
+  background-color: h.$contrast-colour;
+}
+
 
 .section__wrapper{
   margin: 0 4em;

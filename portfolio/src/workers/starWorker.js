@@ -10,6 +10,7 @@ const actions = {
             stars[i * 3 + 1] = (Math.random() - 0.5) * 2 * radius; // y
             stars[i * 3 + 2] = (Math.random() - 0.5) * 2 * radius; // z
         }
+        console.log(stars);
         return stars;
     }
 };

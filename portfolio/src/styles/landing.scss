@@ -35,13 +35,14 @@
   }
   .hero_button{
     display: inline-block;
-    color: h.$text-colour;
+    color: h.$button-font-colour;
     background-color: h.$contrast-colour;
     padding: 12px 24px;
     margin-top: 20px;
     border: none;
     border-radius: 7px;
     font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
     transition: background-color 0.3s ease;
     cursor: pointer;

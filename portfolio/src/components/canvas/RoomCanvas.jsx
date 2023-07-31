@@ -6,26 +6,9 @@ import Loader from '../Loaders/CanvasLoader';
 
 const Room = (isMobile) => {
     const room = useGLTF('/models/room/room_model.glb');
-    const dirLightRef = useRef();
-    const spotLightRef = useRef();
-    const deskTarget = new Object3D();
-    deskTarget.position.set(-3, 0, -4);
-
-    const { scene } = useThree();
 
     useEffect(() => {
         console.log('Room Model Loaded');
-        // if (dirLightRef.current) { 
-        //     const dirHelper = new DirectionalLightHelper(dirLightRef.current);
-        //     scene.add(dirHelper);
-        // }
-
-        if (spotLightRef.current) { 
-            // const spotHelper = new SpotLightHelper(spotLightRef.current);
-            // scene.add(spotHelper);
-            spotLightRef.current.target = deskTarget;
-            scene.add(spotLightRef.current.target);
-        }
     });
 
     return (
@@ -34,13 +17,11 @@ const Room = (isMobile) => {
             intensity={0.3}
         />
         <directionalLight 
-            ref={dirLightRef}
             color={'#FF8C00'}
             intensity={2}
             position={[-1.5, 3, -10]}
         />
         <spotLight 
-            ref={spotLightRef}
             color={'#FF8C00'}
             position={[-1.5, 3, -10]} 
             angle={3} 
@@ -48,7 +29,6 @@ const Room = (isMobile) => {
             intensity={0.8} 
         />
         <spotLight 
-            ref={spotLightRef}
             color={'#c1dbf1'}
             position={[-5.2, 1.5, -6.7]} 
             angle={3} 
@@ -76,11 +56,9 @@ const RoomCanvas = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
           ([entry]) => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !modelLoaded) {
               setModelLoaded(true);
-              if (modelRef.current) {
-                observer.unobserve(modelRef.current);
-              }
+              observer.unobserve(modelRef.current);
             }
           },
           // Start loading the model when it's 10% visible
@@ -95,7 +73,7 @@ const RoomCanvas = () => {
             observer.unobserve(currentRef);
           }
         };
-    }, []);
+    }, [modelLoaded]);
 
     return (
         <div ref={modelRef} className='rCanvas_wrapper'>

@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faFileArrowDown, faLinkedin } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/navbar.scss';
 import { navLinks } from '../constants/constant';
@@ -62,6 +62,11 @@ function Navbar(){
                                 </ScrollLink>
                             </li>
                         ))}
+                        <li>
+                            <a href="https://www.linkedin.com/in/saurav-kc-045083200/">
+                                <FontAwesomeIcon icon={faLinkedin} />
+                            </a>
+                        </li>
                         <li>
                             <ThemeButton />
                         </li>

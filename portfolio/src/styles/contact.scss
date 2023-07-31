@@ -66,8 +66,9 @@
             padding: 10px 20px;
             border: none;
             background-color: h.$contrast-colour;
-            color: h.$text-colour;
+            color: h.$button-font-colour;
             border-radius: 8px;
+            font-weight: 600;
             transition: background-color 0.3s ease;
             
             &:hover{

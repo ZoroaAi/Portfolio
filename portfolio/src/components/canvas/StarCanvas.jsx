@@ -9,32 +9,25 @@ const Stars = (props) => {
 
     useEffect(() => {
       const generateStars = async () => {
-        const worker = new Worker(new URL('../../workers/starWorker', import.meta.url));
-        const actions = wrap(worker);
-
         const storedStars = localStorage.getItem('stars');
 
-        // Retrieve stored stars (for speed)
+        // Retrieve/ Store stars (for speed)
         if (storedStars){
           setSphere(JSON.parse(storedStars));
         }else{
-          const stars = await actions.generateStars();
+          const stars = new Float32Array(3 * 10000);
+          for (let i = 0; i < 10000 * 3; i+=3) {
+            stars[i] = 100 * (Math.random() - 0.5);
+            stars[i + 1] = 100 * (Math.random() - 0.5);
+            stars[i + 2] = 100 * (Math.random() - 0.5);
+          }
           localStorage.setItem('stars', JSON.stringify(stars));
           setSphere(stars);
         }
-
-        worker.terminate();
       };
       
       generateStars();
     }, []);
-
-    useFrame((state, delta) => {
-      if (ref.current){
-        ref.current.rotation.x -= delta / 20;
-        ref.current.rotation.y -= delta / 30;
-      }
-    });
   
     return sphere ? (
       <group rotation={[0, 0, Math.PI / 4]}>
@@ -58,7 +51,6 @@ const StarsCanvas = () => {
             <Suspense fallback={null}>
             <Stars />
             </Suspense>
-
             <Preload all />
         </Canvas>
         </div>

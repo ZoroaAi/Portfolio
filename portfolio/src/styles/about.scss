@@ -37,10 +37,13 @@
         .room_wrapper{
             width: 100%;
             height: 90%;
+            .rCanvas_wrapper{
+                height: 100%;
+            }
         }
 
         canvas{
-            width: 1000%;
+            width: 100%;
             height: 100%;
         }
 

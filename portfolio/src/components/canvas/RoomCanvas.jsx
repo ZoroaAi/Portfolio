@@ -1,6 +1,6 @@
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import { Canvas, useThree } from '@react-three/fiber';
-import { React, Suspense, useEffect, useRef } from 'react';
+import { React, Suspense, useEffect, useRef, useState } from 'react';
 import { Object3D } from 'three';
 import Loader from '../Loaders/CanvasLoader';
 
@@ -38,7 +38,6 @@ const Room = (isMobile) => {
             color={'#FF8C00'}
             intensity={2}
             position={[-1.5, 3, -10]}
-            castShadow
         />
         <spotLight 
             ref={spotLightRef}
@@ -47,7 +46,6 @@ const Room = (isMobile) => {
             angle={3} 
             penumbra={0.5} 
             intensity={0.8} 
-            castShadow 
         />
         <spotLight 
             ref={spotLightRef}
@@ -56,7 +54,6 @@ const Room = (isMobile) => {
             angle={3} 
             penumbra={0.5} 
             intensity={0.8} 
-            castShadow 
         />
         <pointLight 
             color={'#d8af93'}
@@ -73,26 +70,56 @@ const Room = (isMobile) => {
 };
 
 const RoomCanvas = () => {
+    const [modelLoaded, setModelLoaded] = useState(false);
+    const modelRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setModelLoaded(true);
+              if (modelRef.current) {
+                observer.unobserve(modelRef.current);
+              }
+            }
+          },
+          // Start loading the model when it's 10% visible
+          { threshold: 0.1 } 
+        );
+        if (modelRef.current) {
+          observer.observe(modelRef.current);
+        }
+        const currentRef = modelRef.current;
+        return () => {
+          if (currentRef) {
+            observer.unobserve(currentRef);
+          }
+        };
+    }, []);
+
     return (
-        <Canvas 
-            frameLoop='demand'
-            shadows
-            camera={{position: [40,70,30], fov: 14}}
-            gl={{preserveDrawingBuffer: true}}
-        >
-            <Suspense fallback={<Loader/>} >
-                <OrbitControls 
-                enableZoom= {false}
-                maxPolarAngle= {Math.PI / 2}
-                minPolarAngle= {Math.PI / 4}
-                maxAzimuthAngle= {Math.PI / 4}
-                minAzimuthAngle= {Math.PI / 4}
-                />
-                <Room/>
-            </Suspense>
-            <Preload all />
-        </Canvas>
-    )
-}
+        <div ref={modelRef} className='rCanvas_wrapper'>
+            {modelLoaded && (
+                <Canvas
+                frameLoop='demand'
+                camera={{position: [40,70,30], fov: 14}}
+                gl={{preserveDrawingBuffer: true}}
+            >
+                <Suspense fallback={<Loader/>} >
+                    <OrbitControls
+                    enableZoom= {false}
+                    maxPolarAngle= {Math.PI / 2}
+                    minPolarAngle= {Math.PI / 4}
+                    maxAzimuthAngle= {Math.PI / 4}
+                    minAzimuthAngle= {Math.PI / 4}
+                    />
+                    <Room/>
+                </Suspense>
+                <Preload all />
+            </Canvas>
+            )}
+        </div>
+    );
+};
 
 export default RoomCanvas;

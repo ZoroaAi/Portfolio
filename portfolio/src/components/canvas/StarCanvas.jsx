@@ -5,33 +5,30 @@ import { wrap } from "comlink";
 
 const Stars = (props) => {
     const ref = useRef();
-    const [sphere, setSphere] = useState();
+    const [stars, setStars] = useState();
 
     useEffect(() => {
       const generateStars = async () => {
-        const storedStars = localStorage.getItem('stars');
-
-        // Retrieve/ Store stars (for speed)
-        if (storedStars){
-          setSphere(JSON.parse(storedStars));
-        }else{
-          const stars = new Float32Array(3 * 10000);
-          for (let i = 0; i < 10000 * 3; i+=3) {
-            stars[i] = 100 * (Math.random() - 0.5);
-            stars[i + 1] = 100 * (Math.random() - 0.5);
-            stars[i + 2] = 100 * (Math.random() - 0.5);
-          }
-          localStorage.setItem('stars', JSON.stringify(stars));
-          setSphere(stars);
-        }
+        const worker = new Worker(new URL('../../workers/starWorker', import.meta.url));
+        const actions = wrap(worker);
+        const stars = await actions.generateStars();
+        setStars(stars);
+        worker.terminate();
       };
       
       generateStars();
     }, []);
+
+    useFrame((state, delta) => {
+      if (ref.current){
+        ref.current.rotation.x -= delta / 20;
+        ref.current.rotation.y -= delta / 30;
+      }
+    });
   
-    return sphere ? (
+    return stars ? (
       <group rotation={[0, 0, Math.PI / 4]}>
-        <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+        <Points ref={ref} positions={stars} count={stars.length / 3} {...props}>
           <PointMaterial
             transparent
             color='#f272c8'

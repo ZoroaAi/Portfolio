@@ -1,15 +1,10 @@
 
 import { motion } from 'framer-motion';
 
-import { person, clouds, person_dark } from '../assets';
+import { person_dark } from '../assets';
 import '../styles/landing.scss';
 
-import { DarkModeContext } from './dark_mode/DarkMode';
-import { useContext } from 'react';
-
 function Landing(){
-  const {darkMode} = useContext(DarkModeContext);
-
   return(
     <div className='hero' id='home'>
       <div className="hero_main">

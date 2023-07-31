@@ -166,8 +166,8 @@ export const ThemeButton = (props) => {
     }
     
     return(
-        <div className={`switch ${darkMode ? 'dark' : ''}`} data-darkMode={darkMode} onClick={toggleSwitch}>
-            <input type="checkbox" checked={darkMode} readonly/>
+        <div className={`switch ${darkMode ? 'dark' : ''}`} data-darkmode={darkMode} onClick={toggleSwitch}>
+            <input type="checkbox" defaultChecked={darkMode} readOnly/>
             <motion.div className="handle" layout transition={spring} />
         </div>
     );

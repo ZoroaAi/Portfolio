@@ -101,7 +101,7 @@ const RoomCanvas = () => {
         <div ref={modelRef} className='rCanvas_wrapper'>
             {modelLoaded && (
                 <Canvas
-                frameLoop='demand'
+                frameloop='demand'
                 camera={{position: [40,70,30], fov: 14}}
                 gl={{preserveDrawingBuffer: true}}
             >

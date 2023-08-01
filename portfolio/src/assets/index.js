@@ -8,6 +8,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import reactjs from "./tech/reactjs.png";
 import threejs from "./tech/threejs.svg";
+import python from './tech/python.png';
 
 import EFS from "./projects/EFS.jpg";
 import Meliora from "./projects/MelioraMarket.png";
@@ -21,6 +22,7 @@ import clouds from './parallax/clouds.svg';
 import person_dark from './parallax/person_darker_clouds.svg';
 import room from './room_image.png';
 
+import linkedIn from './linkedin-in.svg';
 import cv from './CV.docx';
 
 
@@ -34,6 +36,7 @@ export {
   javascript,
   reactjs,
   threejs,
+  python,
   EFS,
   Meliora,
   VotingSystem,
@@ -43,6 +46,7 @@ export {
   person,
   clouds,
   person_dark,
+  room,
+  linkedIn,
   cv,
-  room
 };

@@ -11,6 +11,7 @@ import {
     threejs,
     uop,
     thinking,
+    python,
 } from "../assets";
 
 export const navLinks = [
@@ -48,6 +49,10 @@ const technologies = [
     {
         name: "Three JS",
         icon: threejs,
+    },
+    {
+        name: "Python",
+        icon: python,
     },
     {
         name: "git",

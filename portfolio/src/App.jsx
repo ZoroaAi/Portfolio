@@ -33,7 +33,6 @@ const  MainContent = () => {
           <Contact />
           <StarCanvas />
         </div>
-        <Footer />
       </div>
     </BrowserRouter>
   );

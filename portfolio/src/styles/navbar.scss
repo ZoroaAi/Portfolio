@@ -109,6 +109,12 @@ ul {
     background: transparent;
 }
 
+.linkedin{
+    &_img{
+        width: 13px;
+        height: 20px;
+    }
+}
 
 @media (max-width: 768px) {
     nav{

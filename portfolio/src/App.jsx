@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 import './App.scss';
 
@@ -61,6 +62,7 @@ function App() {
       <LoadingProgressContext.Provider value={{isLoading, setIsLoading }}>
         <Loading />
         <ContentContainer />
+        <Analytics />
       </LoadingProgressContext.Provider>
     </DarkModeProvider>
   );

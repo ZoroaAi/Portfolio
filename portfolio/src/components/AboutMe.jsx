@@ -28,7 +28,7 @@ function AboutMe(){
                 <motion.div className='room_wrapper' variants={fadeIn('up', 'spring',0.8,0.75)}>
                     <RoomCanvas/>
                 </motion.div>
-                <button className='room_img_link' onClick={() => setIsModalOpen(true)}>
+                <button className='room_img_link' aria-label="Open Room Model Image" onClick={() => setIsModalOpen(true)}>
                     <FontAwesomeIcon className='image_icon' icon={faImages}/>
                 </button>
             </div>

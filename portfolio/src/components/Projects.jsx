@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 import '../styles/projects.scss';
 
-const ProjectCard = ({index, name, description, tags, image, link}) => {
+const ProjectCard = ({index, totalCount, name, description, tags, image, link}) => {
     return (
         <motion.div variants={fadeIn('up', 'spring', index*0.5, 0.75)}>
             <Tilt 
@@ -24,7 +24,7 @@ const ProjectCard = ({index, name, description, tags, image, link}) => {
                     <img 
                         src={image} 
                         alt={name} 
-                        className='card_img'
+                        className={index === totalCount - 1 ? 'card_img last_img' : 'card_img'}
                     />
                 </div>
 
@@ -88,6 +88,7 @@ function Projects() {
                     <ProjectCard 
                         key={`project-${index}`}
                         index={index}
+                        totalCount={projects.length}
                         {...project}
                     />
                 ))}

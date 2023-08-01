@@ -24,7 +24,7 @@ function Landing(){
       </div>
 
       <div className="scroll_button">
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to About Section">
           <div className="button">
             <motion.div 
               animate={{

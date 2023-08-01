@@ -1,4 +1,3 @@
-import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { CacheFirst } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
@@ -45,7 +44,7 @@ addEventListener('install', (event) => {
     event.waitUntil(self.clients.claim());
 });
   
-// Cache CSS and JavaScript Files
+// Cache IMages, CSS and JavaScript Files
 registerRoute(
     /\.(?:js|css)$/,
     new CacheFirst({

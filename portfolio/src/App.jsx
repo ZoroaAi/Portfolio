@@ -12,7 +12,6 @@ import Experience from './components/Experience.jsx';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import StarCanvas from './components/canvas/StarCanvas';
 import { DarkModeContext, DarkModeProvider } from './components/dark_mode/DarkMode';
 import { Loading, LoadingProgressContext } from './components/Loaders/LoadProgressContext';

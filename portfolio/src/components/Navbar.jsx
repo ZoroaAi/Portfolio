@@ -7,7 +7,7 @@ import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/navbar.scss';
 import { navLinks } from '../constants/constant';
-import { logo, cv, linkedIn } from '../assets';
+import { logo, cv } from '../assets';
 import { MobileMenu, MenuButton, ThemeButton } from './helperComps/Menu';
 import { DarkModeContext } from './dark_mode/DarkMode';
 

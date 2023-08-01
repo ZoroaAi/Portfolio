@@ -22,9 +22,7 @@ import clouds from './parallax/clouds.svg';
 import person_dark from './parallax/person_darker_clouds.svg';
 import room from './room_image.png';
 
-import linkedIn from './linkedin-in.svg';
 import cv from './CV.docx';
-
 
 export {
   logo,
@@ -47,6 +45,5 @@ export {
   clouds,
   person_dark,
   room,
-  linkedIn,
   cv,
 };

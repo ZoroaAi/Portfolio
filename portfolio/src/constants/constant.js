@@ -111,7 +111,7 @@ const projects = [
             color: "text-pink",
         },
         ],
-        image: EFS,
+        image: Meliora,
         link: "https://github.com/ZoroaAi/MelioraMarket",
     },
     {
@@ -132,7 +132,7 @@ const projects = [
             color: "text-pink",
         },
         ],
-        image: Meliora,
+        image: EFS,
         link: "https://github.com/",
     },
     {

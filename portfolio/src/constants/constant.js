@@ -8,6 +8,7 @@ import {
     EFS,
     Meliora,
     VotingSystem,
+    FlowFusion,
     threejs,
     uop,
     thinking,
@@ -155,6 +156,27 @@ const projects = [
         ],
         image: VotingSystem,
         link: "https://github.com/ZoroaAi/VotingSystem",
+    },
+    {
+        name: "Flow Fusion AI",
+        description:
+        "A Landing page for my business that i centered around providing AI automations to businesses.",
+        tags: [
+        {
+            name: "react",
+            color: "text-blue",
+        },
+        {
+            name: "scss",
+            color: "text-green",
+        },
+        {
+            name: "html",
+            color: "text-pink",
+        },
+        ],
+        image: FlowFusion,
+        link: "https://www.flowfusionai.com",
     },
     {
         name: "Many More To Come! :)",

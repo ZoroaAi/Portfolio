@@ -13,6 +13,7 @@ import python from './tech/python.png';
 import EFS from "./projects/EFS.jpg";
 import Meliora from "./projects/MelioraMarket.png";
 import VotingSystem from "./projects/VotingSystem.png";
+import FlowFusion from './projects/FlowFusionAI.png';
 
 import thinking from './thinking.svg';
 import uop from './uop_logo.jpg';
@@ -38,6 +39,7 @@ export {
   EFS,
   Meliora,
   VotingSystem,
+  FlowFusion,
   thinking,
   uop,
   airplane,
